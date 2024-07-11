@@ -1,0 +1,51 @@
+@import 'fonts';
+@import 'colors';
+@import 'common';
+
+
+#navigationBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#menuList {
+    list-style: none;
+    display: flex;
+    line-height: 15px;
+    font-size: 12px;
+    font-weight: bold;
+}
+a{
+    text-decoration: none;
+    color: #83888F;
+    
+}
+.aboutUs, .createYourPlan{
+    padding-left: 32px;
+    
+   
+}
+
+#hero{
+    background-image: url("/images/image-hero-coffeepress.jpg");
+    width: 100%;
+    height: 600px;
+    margin-top: 48px;
+    border-radius: $borderRadius;
+    display: flex;
+
+}
+
+#heroContent{
+    width: 50%;
+    padding: 116px 86px;
+    box-sizing: border-box;
+    color: $lightCream;
+}
+
+.primaryButton{
+    margin-top: 56px;
+}
+
+
