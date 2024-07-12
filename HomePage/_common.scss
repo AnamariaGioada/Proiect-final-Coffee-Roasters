@@ -1,6 +1,8 @@
 body {
     padding: 48px 80px 80px 80px;
-    font-family: "Barlow", sans-serif;
+     @extend .barlow-regular;
+    line-height: 26px;
+    font-size: 16px;
     background-color: $white;
 }
 
@@ -8,13 +10,8 @@ $borderRadius: 10px;
 
 h1 {
     @extend .fraunces-black;
-}
-
-.presentationParagraph {
-    @extend .barlow-regular;
-    line-height: 26px;
-    font-size: 16px;
-    
+    line-height: 72px;
+    font-size: 72px;
 }
 
 .primaryButton{
@@ -36,3 +33,15 @@ h1 {
         background-color: $disabledButton;
     }
 }
+
+h4{
+    @extend .fraunces-black;
+    font-size: 24px;
+    line-height: 32px;
+    color:$darkGreyBlue;
+}
+
+ul{
+    list-style: none;
+}
+    
