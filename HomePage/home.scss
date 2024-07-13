@@ -73,13 +73,13 @@ a{
         position: absolute;
         z-index: 0;
         top: 85px;
-        @extend .fraunces-black;
+        @extend .fraunces_9pt-black;
         font-size: 150px;
         line-height: 72px;
         color: $grey;
         width: 100%;
         text-align: center;
-        letter-spacing: 9px;
+        letter-spacing: 16px;
     }
 }
 
