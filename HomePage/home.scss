@@ -91,6 +91,8 @@ a{
     display: flex;
     align-items: end;
     
+    
+    
         ul{
             display:flex;
             flex-direction: row;
@@ -101,21 +103,69 @@ a{
                 display: flex;
                 flex-direction: column;
                 align-items:  center;
+                padding: 30px;
+                padding-top: 0;
 
    
                 img{
                     width: 256px;
                     height: 193px;
+                    padding-bottom: 72px;
                 }
                 .productDescription{
                     text-align: center;
-       
+                  
+                    
                     .presentationParagraph{
                         color:$darkGreyBlue;
+                        
                     }  
                 } 
             }
         }  
+}
+
+#background {
+    background-color: $darkGreyBlue;
+    border-radius: $borderRadius;
+    height: 577px;
+    
+    #reasonToChoose{
+        height: 160px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    h2{
+        padding-top: 100px;
+        color: $lightCream;
+    } 
+
+    p{
+        color: $lightCream80p;
+        width: 540px;
+        text-align:center;
+        margin:0;
+    }
+}
+}
+
+#reasons{
+    position: relative;
+    z-index: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+
+
+    
+
+    li{
+        width: 350px;
+        height: 382px;
+        background-color: $darkCyan;
+        border-radius: $borderRadius;
+    }
 }
 
 

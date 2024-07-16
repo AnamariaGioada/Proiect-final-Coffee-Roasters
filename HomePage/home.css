@@ -3,11 +3,12 @@
   font-style: normal;
 }
 
-.fraunces-black, #productListingContainer #title, h4, .primaryButton, h1 {
+.fraunces_9pt-black, #productListingContainer #title, h2, h4, .primaryButton, h1 {
   font-family: "Fraunces", serif;
   font-optical-sizing: auto;
   font-weight: 900;
   font-style: normal;
+  font-variation-settings: "SOFT" 0, "WONK" 0;
 }
 
 body {
@@ -47,6 +48,11 @@ h4 {
 
 ul {
   list-style: none;
+}
+
+h2 {
+  font-size: 40px;
+  line-height: 48px;
 }
 
 #navigationBar {
@@ -114,7 +120,7 @@ a {
   color: #83888F;
   width: 100%;
   text-align: center;
-  letter-spacing: 9px;
+  letter-spacing: 16px;
 }
 
 #productListing {
@@ -135,14 +141,54 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 30px;
+  padding-top: 0;
 }
 #productListing ul li img {
   width: 256px;
   height: 193px;
+  padding-bottom: 72px;
 }
 #productListing ul li .productDescription {
   text-align: center;
 }
 #productListing ul li .productDescription .presentationParagraph {
   color: #333D4B;
+}
+
+#background {
+  background-color: #333D4B;
+  border-radius: 10px;
+  height: 577px;
+}
+#background #reasonToChoose {
+  height: 160px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#background #reasonToChoose h2 {
+  padding-top: 100px;
+  color: #FEFCF7;
+}
+#background #reasonToChoose p {
+  color: rgba(254, 252, 247, 0.8);
+  width: 540px;
+  text-align: center;
+  margin: 0;
+}
+
+#reasons {
+  position: relative;
+  z-index: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+#reasons li {
+  width: 350px;
+  height: 382px;
+  background-color: #0E8784;
+  border-radius: 10px;
 }/*# sourceMappingURL=home.css.map */
