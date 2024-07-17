@@ -3,7 +3,7 @@
   font-style: normal;
 }
 
-.fraunces_9pt-black, #productListingContainer #title, h2, h4, .primaryButton, h1 {
+.fraunces_9pt-black, #productListingContainer #title, h3, h2, h4, .primaryButton, h1 {
   font-family: "Fraunces", serif;
   font-optical-sizing: auto;
   font-weight: 900;
@@ -12,10 +12,14 @@
 }
 
 body {
-  padding: 48px 80px 80px 80px;
   line-height: 26px;
   font-size: 16px;
   background-color: #FFFFFF;
+}
+
+#homeContainer {
+  margin: 0 auto;
+  width: 1280px;
 }
 
 h1 {
@@ -53,6 +57,11 @@ ul {
 h2 {
   font-size: 40px;
   line-height: 48px;
+}
+
+h3 {
+  font-size: 32px;
+  line-height: 36px;
 }
 
 #navigationBar {
@@ -120,7 +129,7 @@ a {
   color: #83888F;
   width: 100%;
   text-align: center;
-  letter-spacing: 16px;
+  letter-spacing: 5px;
 }
 
 #productListing {
@@ -130,6 +139,7 @@ a {
   padding-top: 125px;
   display: flex;
   align-items: end;
+  justify-content: center;
 }
 #productListing ul {
   display: flex;
@@ -160,6 +170,7 @@ a {
   background-color: #333D4B;
   border-radius: 10px;
   height: 577px;
+  margin-top: 200px;
 }
 #background #reasonToChoose {
   height: 160px;
@@ -169,7 +180,7 @@ a {
   align-items: center;
 }
 #background #reasonToChoose h2 {
-  padding-top: 100px;
+  padding-top: 200px;
   color: #FEFCF7;
 }
 #background #reasonToChoose p {
@@ -179,16 +190,44 @@ a {
   margin: 0;
 }
 
-#reasons {
-  position: relative;
-  z-index: 10px;
+#reasonsList {
   display: flex;
-  flex-direction: column;
-  align-items: end;
+  justify-content: center;
+  gap: 30px;
+  padding: 0 85px;
+  margin-top: -215px;
+  margin-bottom: 180px;
 }
-#reasons li {
+
+.reasonsItem {
   width: 350px;
   height: 382px;
   background-color: #0E8784;
   border-radius: 10px;
+  text-align: center;
+  color: #FEFCF7;
+}
+.reasonsItem img {
+  padding-top: 72px;
+  align-items: center;
+}
+.reasonsItem img.truck {
+  padding-bottom: 20px;
+}
+.reasonsItem h4 {
+  color: #FEFCF7;
+}
+.reasonsItem p {
+  padding: 0 48px 48px 48px;
+}
+
+.stepsTitle {
+  color: #83888F;
+}
+
+#steps {
+  color: #333D4B;
+}
+#steps h1 {
+  color: #FDD6BA;
 }/*# sourceMappingURL=home.css.map */

@@ -79,7 +79,8 @@ a{
         color: $grey;
         width: 100%;
         text-align: center;
-        letter-spacing: 16px;
+        letter-spacing: 5px;
+       
     }
 }
 
@@ -90,6 +91,7 @@ a{
     padding-top: 125px;
     display: flex;
     align-items: end;
+    justify-content: center;
     
     
     
@@ -129,6 +131,7 @@ a{
     background-color: $darkGreyBlue;
     border-radius: $borderRadius;
     height: 577px;
+    margin-top: 200px;
     
     #reasonToChoose{
         height: 160px;
@@ -137,7 +140,7 @@ a{
         justify-content: center;
         align-items: center;
     h2{
-        padding-top: 100px;
+        padding-top: 200px;
         color: $lightCream;
     } 
 
@@ -150,22 +153,50 @@ a{
 }
 }
 
-#reasons{
-    position: relative;
-    z-index: 10px;
+
+#reasonsList{
     display: flex;
-    flex-direction: column;
-    align-items: end;
-
-
+    justify-content: center;
+    gap:30px;
+    padding: 0 85px;
+    margin-top: -215px;
+    margin-bottom: 180px;
+}
+.reasonsItem {
+    width: 350px;
+    height: 382px;
+    background-color: $darkCyan;
+    border-radius: $borderRadius;
+    text-align: center;
+    color: $lightCream;
     
-
-    li{
-        width: 350px;
-        height: 382px;
-        background-color: $darkCyan;
-        border-radius: $borderRadius;
+    
+    img{
+        padding-top: 72px;
+        align-items: center;
+        &.truck{
+            padding-bottom: 20px;
+        }
     }
+    h4{
+        color: $lightCream;
+    }
+    
+    p{
+        padding: 0 48px 48px 48px;
+    }
+    
+}
+
+.stepsTitle{
+    color:$grey;
+}
+#steps{
+    color:$darkGreyBlue;
+    h1{
+        color:$paleOrange;
+    }
+   
 }
 
 

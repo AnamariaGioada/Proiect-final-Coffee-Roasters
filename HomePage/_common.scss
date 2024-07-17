@@ -1,9 +1,12 @@
 body {
-    padding: 48px 80px 80px 80px;
      @extend .barlow-regular;
     line-height: 26px;
     font-size: 16px;
     background-color: $white;
+}
+#homeContainer{
+    margin: 0 auto;
+    width: 1280px;
 }
 
 $borderRadius: 10px;
@@ -49,5 +52,11 @@ h2{
     @extend .fraunces_9pt-black;
     font-size: 40px;
     line-height: 48px;
+}
+
+h3{
+    @extend .fraunces_9pt-black;
+    font-size: 32px;
+    line-height: 36px;
 }
     
