@@ -8,6 +8,11 @@ body {
     margin: 0 auto;
     width: 1280px;
 }
+a {
+    text-decoration: none;
+    color: #83888F;
+
+}
 
 $borderRadius: 10px;
 
@@ -59,4 +64,38 @@ h3{
     font-size: 32px;
     line-height: 36px;
 }
-    
+// NAVIGATION BAR
+#navigationBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    #menuList {
+        list-style: none;
+        display: flex;
+        line-height: 15px;
+        font-size: 12px;
+        font-weight: bold;
+    }
+
+    .aboutUs,
+    .createYourPlan {
+        padding-left: 32px;
+    }
+}
+
+// FOOTER
+footer{
+    background-color: $darkGreyBlue;
+    height: 120px;
+    display: flex;
+    padding:0 88px;
+    align-items: center;
+    justify-content: space-between;
+    color: $lightCream;
+    ul{
+        display: flex;
+        justify-content: space-between;
+    }
+
+}

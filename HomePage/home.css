@@ -22,6 +22,11 @@ body {
   width: 1280px;
 }
 
+a {
+  text-decoration: none;
+  color: #83888F;
+}
+
 h1 {
   line-height: 72px;
   font-size: 72px;
@@ -69,22 +74,30 @@ h3 {
   justify-content: space-between;
   align-items: center;
 }
-
-#menuList {
+#navigationBar #menuList {
   list-style: none;
   display: flex;
   line-height: 15px;
   font-size: 12px;
   font-weight: bold;
 }
-
-a {
-  text-decoration: none;
-  color: #83888F;
+#navigationBar .aboutUs,
+#navigationBar .createYourPlan {
+  padding-left: 32px;
 }
 
-.aboutUs, .createYourPlan {
-  padding-left: 32px;
+footer {
+  background-color: #333D4B;
+  height: 120px;
+  display: flex;
+  padding: 0 88px;
+  align-items: center;
+  justify-content: space-between;
+  color: #FEFCF7;
+}
+footer ul {
+  display: flex;
+  justify-content: space-between;
 }
 
 #hero {
@@ -221,13 +234,39 @@ a {
   padding: 0 48px 48px 48px;
 }
 
-.stepsTitle {
-  color: #83888F;
+#stepsContainer {
+  margin-bottom: 88px;
 }
-
-#steps {
+#stepsContainer .stepsTitle {
+  color: #83888F;
+  margin-left: 40px;
+}
+#stepsContainer #steps {
+  display: flex;
   color: #333D4B;
 }
-#steps h1 {
+#stepsContainer #steps li {
+  margin-top: 80px;
+  border-top: 1px solid #FDD6BA;
+  padding-right: 96px;
+}
+#stepsContainer #steps li.thirdStep {
+  border-top: 0;
+}
+#stepsContainer #steps h1 {
   color: #FDD6BA;
+  padding: 40px 0;
+}
+#stepsContainer #steps .circle {
+  width: 30px;
+  height: 30px;
+  border: solid #0E8784;
+  border-radius: 50%;
+  background-color: #FEFCF7;
+  position: absolute;
+  margin-top: -18px;
+}
+
+.button {
+  margin-bottom: 200px;
 }/*# sourceMappingURL=home.css.map */
