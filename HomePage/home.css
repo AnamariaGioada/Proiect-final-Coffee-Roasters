@@ -3,7 +3,7 @@
   font-style: normal;
 }
 
-.fraunces_9pt-black, #productListingContainer #title, h3, h2, h4, .primaryButton, h1 {
+.fraunces_9pt-black, #productListingContainer #title, .primaryButton, h4, h3, h2, h1 {
   font-family: "Fraunces", serif;
   font-optical-sizing: auto;
   font-weight: 900;
@@ -32,6 +32,46 @@ h1 {
   font-size: 72px;
 }
 
+h2 {
+  font-size: 40px;
+  line-height: 48px;
+}
+
+h3 {
+  font-size: 32px;
+  line-height: 36px;
+}
+
+h4 {
+  font-size: 24px;
+  line-height: 32px;
+  color: #333D4B;
+}
+
+ul {
+  list-style: none;
+}
+
+#navigationBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#navigationBar #menuList {
+  list-style: none;
+  display: flex;
+  line-height: 15px;
+  font-size: 12px;
+  font-weight: bold;
+}
+#navigationBar #menuList a:hover {
+  color: #333D4B;
+}
+#navigationBar .aboutUs,
+#navigationBar .createYourPlan {
+  padding-left: 32px;
+}
+
 .primaryButton {
   width: 217px;
   height: 56px;
@@ -49,43 +89,6 @@ h1 {
   background-color: #E2DEDB;
 }
 
-h4 {
-  font-size: 24px;
-  line-height: 32px;
-  color: #333D4B;
-}
-
-ul {
-  list-style: none;
-}
-
-h2 {
-  font-size: 40px;
-  line-height: 48px;
-}
-
-h3 {
-  font-size: 32px;
-  line-height: 36px;
-}
-
-#navigationBar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-#navigationBar #menuList {
-  list-style: none;
-  display: flex;
-  line-height: 15px;
-  font-size: 12px;
-  font-weight: bold;
-}
-#navigationBar .aboutUs,
-#navigationBar .createYourPlan {
-  padding-left: 32px;
-}
-
 footer {
   background-color: #333D4B;
   height: 120px;
@@ -95,9 +98,70 @@ footer {
   justify-content: space-between;
   color: #FEFCF7;
 }
-footer ul {
+footer .footerLeft {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+}
+footer .footerLeft #menuList {
   display: flex;
   justify-content: space-between;
+}
+footer .footerLeft li {
+  margin-right: 30px;
+}
+footer .footerLeft li.createYourPlan {
+  margin-right: 0;
+}
+footer .footerLeft li a:hover {
+  color: #FEFCF7;
+}
+footer #socialMedia ul {
+  display: flex;
+  flex-direction: row;
+}
+footer #socialMedia ul li {
+  margin-right: 24px;
+}
+footer #socialMedia ul li.instagram {
+  margin-right: 0;
+}
+footer #socialMedia ul li a:hover path {
+  fill: #FDD6BA;
+}
+
+#stepsContainer {
+  margin-bottom: 88px;
+}
+#stepsContainer .stepsTitle {
+  color: #83888F;
+  margin-left: 40px;
+}
+#stepsContainer #steps {
+  display: flex;
+  color: #333D4B;
+}
+#stepsContainer #steps li {
+  margin-top: 80px;
+  border-top: 1px solid #FDD6BA;
+  padding-right: 96px;
+}
+#stepsContainer #steps li.thirdStep {
+  border-top: 0;
+}
+#stepsContainer #steps h1 {
+  color: #FDD6BA;
+  padding: 40px 0;
+}
+#stepsContainer #steps .circle {
+  width: 30px;
+  height: 30px;
+  border: solid #0E8784;
+  border-radius: 50%;
+  background-color: #FEFCF7;
+  position: absolute;
+  margin-top: -18px;
 }
 
 #hero {
@@ -232,39 +296,6 @@ footer ul {
 }
 .reasonsItem p {
   padding: 0 48px 48px 48px;
-}
-
-#stepsContainer {
-  margin-bottom: 88px;
-}
-#stepsContainer .stepsTitle {
-  color: #83888F;
-  margin-left: 40px;
-}
-#stepsContainer #steps {
-  display: flex;
-  color: #333D4B;
-}
-#stepsContainer #steps li {
-  margin-top: 80px;
-  border-top: 1px solid #FDD6BA;
-  padding-right: 96px;
-}
-#stepsContainer #steps li.thirdStep {
-  border-top: 0;
-}
-#stepsContainer #steps h1 {
-  color: #FDD6BA;
-  padding: 40px 0;
-}
-#stepsContainer #steps .circle {
-  width: 30px;
-  height: 30px;
-  border: solid #0E8784;
-  border-radius: 50%;
-  background-color: #FEFCF7;
-  position: absolute;
-  margin-top: -18px;
 }
 
 .button {
