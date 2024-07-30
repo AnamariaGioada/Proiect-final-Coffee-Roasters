@@ -1,12 +1,15 @@
+@media screen and (min-width: 992px){
+.container {
+        margin: 0 auto;
+        width: 952px;
+    }
+}
+
 body {
      @extend .barlow-regular;
     line-height: 26px;
     font-size: 16px;
     background-color: $white;
-}
-#homeContainer{
-    margin: 0 auto;
-    width: 1280px;
 }
 
 a {
