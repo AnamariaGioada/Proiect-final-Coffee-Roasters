@@ -1,16 +1,22 @@
-@media screen and (min-width: 992px){
+
 .container {
-        margin: 0 auto;
-        width: 952px;
-    }
+    margin: 0 24px;
 }
 
+
+// Mobile
 body {
      @extend .barlow-regular;
     line-height: 26px;
     font-size: 16px;
-    background-color: $white;
+    background-color: $lightCream;
+    margin: 0;
 }
+// .container{
+//     margin:0 auto;
+//     width: 375px;
+//     padding: 24px;
+// }
 
 a {
     text-decoration: none;
@@ -21,8 +27,8 @@ $borderRadius: 10px;
 
 h1 {
     @extend .fraunces_9pt-black;
-    line-height: 72px;
-    font-size: 72px;
+    line-height: 40px;
+    font-size: 40px;
 }
 
 h2 {
@@ -49,26 +55,14 @@ ul{
 }
 
 // NAVIGATION BAR
-#navigationBar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    #menuList {
-        list-style: none;
-        display: flex;
-        line-height: 15px;
-        font-size: 12px;
-        font-weight: bold;
-        a:hover{
-            color:$darkGreyBlue;
-        }
-    }
-
-    .aboutUs,
-    .createYourPlan {
-        padding-left: 32px;
-    }
+ #navigationBar {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     margin-top: 40px;
+}
+#menuList {
+    display: none;
 }
 // Primary Button
 .primaryButton {
@@ -185,3 +179,43 @@ footer{
     }
 }
 
+// DESKTOP
+@media screen and (min-width: 992px) {
+    .container {
+        margin: 0 auto;
+        width: 952px;
+    }
+
+    #navigationBar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        #menuList {
+            list-style: none;
+            display: flex;
+            line-height: 15px;
+            font-size: 12px;
+            font-weight: bold;
+
+            a:hover {
+                color: $darkGreyBlue;
+            }
+        }
+
+        .aboutUs,
+        .createYourPlan {
+            padding-left: 32px;
+        }
+    }
+
+    .hamburgerMenu {
+        display: none;
+    }
+
+        h1 {
+            
+            line-height: 72px;
+            font-size: 72px;
+        }
+}
