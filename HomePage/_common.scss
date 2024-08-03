@@ -145,11 +145,12 @@ footer{
     .stepsTitle {
         color: $grey;
         margin-left: 40px;
+        // text-align: center;
     }
 
     #steps {
         display: flex;
-
+        // flex-direction: column;
         color: $darkGreyBlue;
 
         li {
@@ -185,7 +186,7 @@ footer{
         margin: 0 auto;
         width: 952px;
     }
-
+// Nav bar - DESKTOP
     #navigationBar {
         display: flex;
         justify-content: space-between;
@@ -218,4 +219,45 @@ footer{
             line-height: 72px;
             font-size: 72px;
         }
-}
+
+
+// How it works - Desktop
+#stepsContainer {
+    margin-bottom: 88px;
+
+    .stepsTitle {
+        color: $grey;
+        margin-left: 40px;
+    }
+
+    #steps {
+        display: flex;
+
+        color: $darkGreyBlue;
+
+        li {
+            margin-top: 80px;
+            border-top: 1px solid $paleOrange;
+            padding-right: 96px;
+
+            &.thirdStep {
+                border-top: 0;
+            }
+        }
+
+        h1 {
+            color: $paleOrange;
+            padding: 40px 0;
+        }
+
+        .circle {
+            width: 30px;
+            height: 30px;
+            border: solid $darkCyan;
+            border-radius: 50%;
+            background-color: $lightCream;
+            position: absolute;
+            margin-top: -18px;
+        }
+    }
+}}

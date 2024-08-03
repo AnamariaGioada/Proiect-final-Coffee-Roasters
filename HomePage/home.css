@@ -186,6 +186,38 @@ footer #socialMedia ul li a:hover path {
     line-height: 72px;
     font-size: 72px;
   }
+  #stepsContainer {
+    margin-bottom: 88px;
+  }
+  #stepsContainer .stepsTitle {
+    color: #83888F;
+    margin-left: 40px;
+  }
+  #stepsContainer #steps {
+    display: flex;
+    color: #333D4B;
+  }
+  #stepsContainer #steps li {
+    margin-top: 80px;
+    border-top: 1px solid #FDD6BA;
+    padding-right: 96px;
+  }
+  #stepsContainer #steps li.thirdStep {
+    border-top: 0;
+  }
+  #stepsContainer #steps h1 {
+    color: #FDD6BA;
+    padding: 40px 0;
+  }
+  #stepsContainer #steps .circle {
+    width: 30px;
+    height: 30px;
+    border: solid #0E8784;
+    border-radius: 50%;
+    background-color: #FEFCF7;
+    position: absolute;
+    margin-top: -18px;
+  }
 }
 #hero {
   background-image: url("/images/image-hero-coffeepress.jpg");
@@ -298,7 +330,8 @@ footer #socialMedia ul li a:hover path {
 }
 #background #reasonToChoose p {
   color: rgba(254, 252, 247, 0.8);
-  width: 540px;
+  width: auto;
+  padding: 20px;
   text-align: center;
   margin: 0;
   font-size: 15px;
@@ -311,9 +344,8 @@ footer #socialMedia ul li a:hover path {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
   z-index: 0;
-  background-repeat: no-repeat;
   padding-top: 36px;
-  height: 472px;
+  height: 580px;
   margin-bottom: 1000px;
 }
 
@@ -321,6 +353,7 @@ footer #socialMedia ul li a:hover path {
   margin: 0;
   padding: 0;
   z-index: 10;
+  margin-top: -1550px;
 }
 
 .reasonsItem {
@@ -331,10 +364,9 @@ footer #socialMedia ul li a:hover path {
   text-align: center;
   color: #FEFCF7;
   margin: 0px 24px 24px 24px;
-  padding-bottom: 48px;
 }
 .reasonsItem img {
-  padding-top: 72px;
+  padding-top: 50px;
   align-items: center;
 }
 .reasonsItem img.truck {
@@ -342,9 +374,6 @@ footer #socialMedia ul li a:hover path {
 }
 .reasonsItem h4 {
   color: #FEFCF7;
-}
-.reasonsItem p {
-  padding: 0 48px 48px 48px;
 }
 
 @media screen and (min-width: 992px) {
@@ -381,6 +410,7 @@ footer #socialMedia ul li a:hover path {
     flex-direction: row;
     justify-content: space-between;
     padding: 0;
+    align-items: baseline;
   }
   #productListing ul li {
     display: flex;
@@ -388,7 +418,7 @@ footer #socialMedia ul li a:hover path {
     align-items: center;
     padding: 15px;
     padding-top: 0;
-    margin-top: -35px;
+    margin-top: -65px;
     z-index: 10;
   }
   #productListing ul li img {
@@ -410,7 +440,7 @@ footer #socialMedia ul li a:hover path {
     background-color: #333D4B;
     border-radius: 10px;
     height: 577px;
-    margin-top: 200px;
+    margin-top: 100px;
   }
   #background #reasonToChoose {
     height: 160px;
@@ -429,28 +459,26 @@ footer #socialMedia ul li a:hover path {
     text-align: center;
     margin: 0;
   }
-  #backgroundImageReasons {
-    display: none;
-  }
   #reasonsList {
     display: flex;
     justify-content: center;
-    gap: 30px;
-    padding: 0 85px;
+    padding: 10px 30px;
     margin-top: -215px;
     margin-bottom: 180px;
+    align-items: center;
   }
   .reasonsItem {
-    width: 350px;
-    height: 382px;
+    width: 400px;
+    height: 350px;
     background-color: #0E8784;
     border-radius: 10px;
     text-align: center;
     color: #FEFCF7;
     padding-bottom: 48px;
+    padding: 10px;
   }
   .reasonsItem img {
-    padding-top: 72px;
+    padding-top: 40px;
     align-items: center;
   }
   .reasonsItem img.truck {
@@ -460,7 +488,10 @@ footer #socialMedia ul li a:hover path {
     color: #FEFCF7;
   }
   .reasonsItem p {
-    padding: 0 48px 48px 48px;
+    padding: 0 24px 48px 24px;
+  }
+  #backgroundImageReasons {
+    display: none;
   }
   .button {
     margin-bottom: 200px;
