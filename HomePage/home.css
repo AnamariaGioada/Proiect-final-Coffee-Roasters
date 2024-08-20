@@ -124,35 +124,34 @@ footer #socialMedia ul li a:hover path {
 
 #stepsContainer {
   margin-bottom: 88px;
+  padding: 24px;
 }
 #stepsContainer .stepsTitle {
   color: #83888F;
-  margin-left: 40px;
+  margin-top: 120px;
+  text-align: center;
+  font-size: 48px;
+  line-height: 32px;
 }
 #stepsContainer #steps {
   display: flex;
+  flex-direction: column;
   color: #333D4B;
 }
 #stepsContainer #steps li {
-  margin-top: 80px;
-  border-top: 1px solid #FDD6BA;
+  margin-top: 50px;
   padding-right: 96px;
-}
-#stepsContainer #steps li.thirdStep {
-  border-top: 0;
+  text-align: center;
 }
 #stepsContainer #steps h1 {
   color: #FDD6BA;
-  padding: 40px 0;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 72px;
+  line-height: 72px;
 }
 #stepsContainer #steps .circle {
-  width: 30px;
-  height: 30px;
-  border: solid #0E8784;
-  border-radius: 50%;
-  background-color: #FEFCF7;
-  position: absolute;
-  margin-top: -18px;
+  display: none;
 }
 
 @media screen and (min-width: 992px) {
@@ -195,6 +194,7 @@ footer #socialMedia ul li a:hover path {
   }
   #stepsContainer #steps {
     display: flex;
+    flex-direction: row;
     color: #333D4B;
   }
   #stepsContainer #steps li {
@@ -210,6 +210,7 @@ footer #socialMedia ul li a:hover path {
     padding: 40px 0;
   }
   #stepsContainer #steps .circle {
+    display: block;
     width: 30px;
     height: 30px;
     border: solid #0E8784;
@@ -374,6 +375,10 @@ footer #socialMedia ul li a:hover path {
 }
 .reasonsItem h4 {
   color: #FEFCF7;
+}
+
+.button {
+  margin-bottom: 120px;
 }
 
 @media screen and (min-width: 992px) {

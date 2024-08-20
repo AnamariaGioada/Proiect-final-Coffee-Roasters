@@ -141,43 +141,42 @@ footer{
 // HOW IT WORKS
 #stepsContainer {
     margin-bottom: 88px;
+    padding: 24px;
 
     .stepsTitle {
         color: $grey;
-        margin-left: 40px;
-        // text-align: center;
+        margin-top: 120px;
+        text-align: center;
+        font-size: 48px;
+        line-height: 32px;
     }
 
     #steps {
         display: flex;
-        // flex-direction: column;
+        flex-direction: column;
         color: $darkGreyBlue;
 
         li {
-            margin-top: 80px;
-            border-top: 1px solid $paleOrange;
+            margin-top: 50px;
             padding-right: 96px;
-
-            &.thirdStep {
-                border-top: 0;
-            }
+            text-align: center;
         }
 
         h1 {
             color: $paleOrange;
-            padding: 40px 0;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 72px;
+            line-height: 72px;
         }
 
         .circle {
-            width: 30px;
-            height: 30px;
-            border: solid $darkCyan;
-            border-radius: 50%;
-            background-color: $lightCream;
-            position: absolute;
-            margin-top: -18px;
+            display: none;
+        
         }
-    }
+       
+    
+}
 }
 
 // DESKTOP
@@ -232,7 +231,7 @@ footer{
 
     #steps {
         display: flex;
-
+        flex-direction: row;
         color: $darkGreyBlue;
 
         li {
@@ -251,6 +250,7 @@ footer{
         }
 
         .circle {
+            display: block;
             width: 30px;
             height: 30px;
             border: solid $darkCyan;
@@ -260,4 +260,5 @@ footer{
             margin-top: -18px;
         }
     }
-}}
+}
+}
