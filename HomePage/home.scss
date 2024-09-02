@@ -6,7 +6,7 @@
          @extend .fraunces_9pt-black;
 }
 
-  // HERO CONTAINER - mobile
+//   HERO CONTAINER - mobile
 
 
     // #heroContainer{
@@ -31,9 +31,11 @@
               box-sizing: border-box;
               color: $lightCream;
               text-align:center;
+              font-size: 15px;
     
               h1 {
                   margin-top: 0;
+                  font-size: 40px;
               }
     
               .presentationParagraph {
