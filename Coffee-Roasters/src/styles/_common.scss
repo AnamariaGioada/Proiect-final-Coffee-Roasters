@@ -56,7 +56,10 @@ ul{
         display: flex;
         line-height: 15px;
         font-size: 12px;
-        font-weight: bold;
+        font-weight:550;
+        a {
+            color: $grey;
+        }
         a:hover{
             color:$darkGreyBlue;
         }
@@ -115,7 +118,9 @@ footer{
                 &.createYourPlan {
                     margin-right: 0;
                 }
-    
+                a{
+                    color: $grey;
+                }
                 a:hover {
                     color: $lightCream;
                 }

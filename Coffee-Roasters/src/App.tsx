@@ -3,8 +3,6 @@ import AboutUs from "./components/AboutUs";
 import CreateYourPlan from "./components/CreateYourPlan";
 import { Routes, Route } from "react-router-dom";
 
-import "./App.css";
-
 function App() {
   return (
     <Routes>
