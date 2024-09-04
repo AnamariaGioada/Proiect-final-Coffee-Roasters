@@ -1,0 +1,126 @@
+.barlow-regular, body {
+  font-family: "Barlow", sans-serif;
+  font-style: normal;
+}
+
+.fraunces_9pt-black, .primaryButton, h4, h3, h2, h1 {
+  font-family: "Fraunces", serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+  font-variation-settings: "SOFT" 0, "WONK" 0;
+}
+
+body {
+  line-height: 26px;
+  font-size: 16px;
+  background-color: #FFFFFF;
+}
+
+#PageContainer {
+  margin: 0 auto;
+  width: 1280px;
+}
+
+a {
+  text-decoration: none;
+  color: #83888F;
+}
+
+h1 {
+  line-height: 72px;
+  font-size: 72px;
+}
+
+h2 {
+  font-size: 40px;
+  line-height: 48px;
+}
+
+h3 {
+  font-size: 32px;
+  line-height: 36px;
+}
+
+h4 {
+  font-size: 24px;
+  line-height: 32px;
+  color: #333D4B;
+}
+
+ul {
+  list-style: none;
+}
+
+.primaryButton {
+  width: 217px;
+  height: 56px;
+  background-color: #0E8784;
+  color: #FEFCF7;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 10px;
+  border: none;
+}
+.primaryButton:hover {
+  background-color: #66D2CF;
+}
+.primaryButton:disabled {
+  background-color: #E2DEDB;
+}
+
+#stepsContainer {
+  margin-bottom: 88px;
+}
+#stepsContainer .stepsTitle {
+  color: #83888F;
+  margin-left: 40px;
+}
+#stepsContainer #steps {
+  display: flex;
+  color: #333D4B;
+}
+#stepsContainer #steps li {
+  margin-top: 80px;
+  border-top: 1px solid #FDD6BA;
+  padding-right: 96px;
+}
+#stepsContainer #steps li.thirdStep {
+  border-top: 0;
+}
+#stepsContainer #steps h1 {
+  color: #FDD6BA;
+  padding: 40px 0;
+}
+#stepsContainer #steps .circle {
+  width: 30px;
+  height: 30px;
+  border: solid #0E8784;
+  border-radius: 50%;
+  background-color: #FEFCF7;
+  position: absolute;
+  margin-top: -18px;
+}
+
+#navigationBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#navigationBar #menuList {
+  list-style: none;
+  display: flex;
+  line-height: 15px;
+  font-size: 12px;
+  font-weight: 550;
+}
+#navigationBar #menuList a {
+  color: #83888F;
+}
+#navigationBar #menuList a:hover {
+  color: #333D4B;
+}
+#navigationBar .aboutUs,
+#navigationBar .createYourPlan {
+  padding-left: 32px;
+}/*# sourceMappingURL=navBar.css.map */

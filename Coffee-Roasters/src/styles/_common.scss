@@ -4,7 +4,7 @@ body {
     font-size: 16px;
     background-color: $white;
 }
-#homeContainer{
+#PageContainer{
     margin: 0 auto;
     width: 1280px;
 }
@@ -45,31 +45,7 @@ ul{
     list-style: none;
 }
 
-// NAVIGATION BAR
-#navigationBar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 
-    #menuList {
-        list-style: none;
-        display: flex;
-        line-height: 15px;
-        font-size: 12px;
-        font-weight:550;
-        a {
-            color: $grey;
-        }
-        a:hover{
-            color:$darkGreyBlue;
-        }
-    }
-
-    .aboutUs,
-    .createYourPlan {
-        padding-left: 32px;
-    }
-}
 // Primary Button
 .primaryButton {
     width: 217px;
@@ -91,60 +67,6 @@ ul{
     }
 }
 
-// FOOTER
-footer{
-    background-color: $darkGreyBlue;
-    height: 120px;
-    display: flex;
-    padding:0 88px;
-    align-items: center;
-    justify-content: space-between;
-    color: $lightCream;
-   
-    .footerLeft {
-            display: flex;
-            justify-content: center;
-            flex-direction: row;
-            align-items: center;
-    
-            #menuList {
-                display: flex;
-                justify-content: space-between;
-            }
-    
-            li {
-                margin-right: 30px;
-    
-                &.createYourPlan {
-                    margin-right: 0;
-                }
-                a{
-                    color: $grey;
-                }
-                a:hover {
-                    color: $lightCream;
-                }
-            }
-        }
-   
-#socialMedia ul {
-        display: flex;
-        flex-direction: row;
-        li{
-            margin-right: 24px;
-            &.instagram{
-                margin-right:0;
-            }
-
-            a:hover{
-                path{
-                    fill:$paleOrange;
-                }
-            }
-        }
-     }
-        
-    }
 
 // HOW IT WORKS
 #stepsContainer {
