@@ -26,7 +26,7 @@ function AboutUs() {
 
       {/* Our commitment */}
       <div id="commitmentContainer">
-        <div id="commitmentImage"></div>
+        <img src="/images/image-commitment.jpg" alt="commitmentImage" />
         <div id="commitmentPresentation">
           <h2>Our commitment</h2>
           <p className="commitmentParagraph">
@@ -42,6 +42,30 @@ function AboutUs() {
             only the finest blends, we roast each lot to highlight tasting
             profiles distinctive to their native growing region.
           </p>
+        </div>
+      </div>
+
+      {/* Uncompromising quality */}
+      <div id="qualityContainer">
+        <div id="qualityPresentation">
+          <h2>Uncompromising quality</h2>
+          <p>
+            Although we work with growers who pay close attention to all stages
+            of harvest and processing, we employ, on our end, a rigorous quality
+            control program to avoid over-roasting or baking the coffee dry.
+            Every bag of coffee is tagged with a roast date and batch number.
+            Our goal is to roast consistent, user-friendly coffee, so that
+            brewing is easy and enjoyable.
+          </p>
+        </div>
+        <img src="/images/image-quality.jpg" alt="quality image" />
+      </div>
+
+      {/* Our headquarters */}
+      <div id="headquartersContainer">
+        <h4>Our headquarters</h4>
+        <div id="headquarters">
+          <div className="UK"></div>
         </div>
       </div>
       <Footer />

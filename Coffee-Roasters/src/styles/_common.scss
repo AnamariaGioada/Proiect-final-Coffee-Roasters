@@ -1,111 +1,108 @@
 body {
-     @extend .barlow-regular;
-    line-height: 26px;
-    font-size: 16px;
-    background-color: $white;
+  @extend .barlow-regular;
+  line-height: 26px;
+  font-size: 16px;
+  background-color: $white;
 }
-#PageContainer{
-    margin: 0 auto;
-    width: 1280px;
+#PageContainer {
+  margin: 0 auto;
+  width: 1200px;
 }
 
 a {
-    text-decoration: none;
-    color: #83888F;
+  text-decoration: none;
+  color: #83888f;
 }
 
 $borderRadius: 10px;
 
 h1 {
-    @extend .fraunces_9pt-black;
-    line-height: 72px;
-    font-size: 72px;
+  @extend .fraunces_9pt-black;
+  line-height: 72px;
+  font-size: 72px;
 }
 
 h2 {
-    @extend .fraunces_9pt-black;
-    font-size: 40px;
-    line-height: 48px;
+  @extend .fraunces_9pt-black;
+  font-size: 40px;
+  line-height: 48px;
 }
 
 h3 {
-    @extend .fraunces_9pt-black;
-    font-size: 32px;
-    line-height: 36px;
+  @extend .fraunces_9pt-black;
+  font-size: 32px;
+  line-height: 36px;
 }
 
-h4{
-    @extend .fraunces_9pt-black;
-    font-size: 24px;
-    line-height: 32px;
-    color:$darkGreyBlue;
+h4 {
+  @extend .fraunces_9pt-black;
+  font-size: 24px;
+  line-height: 32px;
+  color: $darkGreyBlue;
 }
 
-ul{
-    list-style: none;
+ul {
+  list-style: none;
 }
-
 
 // Primary Button
 .primaryButton {
-    width: 217px;
-    height: 56px;
-    background-color: $darkCyan;
-    @extend .fraunces_9pt-black;
-    color: $lightCream;
-    font-size: 18px;
-    line-height: 25px;
-    border-radius: $borderRadius;
-    border: none;
+  width: 217px;
+  height: 56px;
+  background-color: $darkCyan;
+  @extend .fraunces_9pt-black;
+  color: $lightCream;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: $borderRadius;
+  border: none;
 
-    &:hover {
-        background-color: $hoverButton;
-    }
+  &:hover {
+    background-color: $hoverButton;
+  }
 
-    &:disabled {
-        background-color: $disabledButton;
-    }
+  &:disabled {
+    background-color: $disabledButton;
+  }
 }
-
 
 // HOW IT WORKS
 #stepsContainer {
-    margin-bottom: 88px;
+  margin-bottom: 88px;
 
-    .stepsTitle {
-        color: $grey;
-        margin-left: 40px;
+  .stepsTitle {
+    color: $grey;
+    margin-left: 40px;
+  }
+
+  #steps {
+    display: flex;
+
+    color: $darkGreyBlue;
+
+    li {
+      margin-top: 80px;
+      border-top: 1px solid $paleOrange;
+      padding-right: 96px;
+
+      &.thirdStep {
+        border-top: 0;
+      }
     }
 
-    #steps {
-        display: flex;
-
-        color: $darkGreyBlue;
-
-        li {
-            margin-top: 80px;
-            border-top: 1px solid $paleOrange;
-            padding-right: 96px;
-
-            &.thirdStep {
-                border-top: 0;
-            }
-        }
-
-        h1 {
-            color: $paleOrange;
-            padding: 40px 0;
-        }
-
-        .circle {
-            width: 30px;
-            height: 30px;
-            border: solid $darkCyan;
-            border-radius: 50%;
-            background-color: $lightCream;
-            position: absolute;
-            margin-top: -18px;
-        }
+    h1 {
+      color: $paleOrange;
+      padding: 40px 0;
     }
+
+    .circle {
+      width: 30px;
+      height: 30px;
+      border: solid $darkCyan;
+      border-radius: 50%;
+      background-color: $lightCream;
+      position: absolute;
+      margin-top: -18px;
+    }
+  }
 }
-
