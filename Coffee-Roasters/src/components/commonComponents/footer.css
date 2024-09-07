@@ -14,17 +14,17 @@
 body {
   line-height: 26px;
   font-size: 16px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 #PageContainer {
   margin: 0 auto;
-  width: 1280px;
+  width: 1200px;
 }
 
 a {
   text-decoration: none;
-  color: #83888F;
+  color: #83888f;
 }
 
 h1 {
@@ -45,71 +45,55 @@ h3 {
 h4 {
   font-size: 24px;
   line-height: 32px;
-  color: #333D4B;
+  color: #333d4b;
 }
 
 ul {
   list-style: none;
 }
 
-.primaryButton {
-  width: 217px;
-  height: 56px;
-  background-color: #0E8784;
-  color: #FEFCF7;
-  font-size: 18px;
-  line-height: 25px;
-  border-radius: 10px;
-  border: none;
+#heroContent {
+  width: 632px;
+  padding: 0 86px;
+  box-sizing: border-box;
+  color: #fefcf7;
 }
-.primaryButton:hover {
-  background-color: #66D2CF;
+#heroContent h1 {
+  margin-top: 0;
 }
-.primaryButton:disabled {
-  background-color: #E2DEDB;
+#heroContent .presentationParagraph {
+  color: #fefcf7;
 }
 
-#stepsContainer {
-  margin-bottom: 88px;
-}
-#stepsContainer .stepsTitle {
-  color: #83888F;
-  margin-left: 40px;
-}
-#stepsContainer #steps {
+.primaryButton {
   display: flex;
-  color: #333D4B;
+  justify-content: center;
+  align-items: center;
+  width: 217px;
+  height: 56px;
+  background-color: #0e8784;
+  border-radius: 6px;
+  border: none;
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: 700;
+  color: #fefcf7;
 }
-#stepsContainer #steps li {
-  margin-top: 80px;
-  border-top: 1px solid #FDD6BA;
-  padding-right: 96px;
+.primaryButton:hover {
+  background-color: #66d2cf;
 }
-#stepsContainer #steps li.thirdStep {
-  border-top: 0;
-}
-#stepsContainer #steps h1 {
-  color: #FDD6BA;
-  padding: 40px 0;
-}
-#stepsContainer #steps .circle {
-  width: 30px;
-  height: 30px;
-  border: solid #0E8784;
-  border-radius: 50%;
-  background-color: #FEFCF7;
-  position: absolute;
-  margin-top: -18px;
+.primaryButton:disabled {
+  background-color: #e2dedb;
 }
 
 footer {
-  background-color: #333D4B;
+  background-color: #2c343e;
   height: 120px;
   display: flex;
   padding: 0 88px;
   align-items: center;
   justify-content: space-between;
-  color: #FEFCF7;
+  color: #fefcf7;
 }
 footer .footerLeft {
   display: flex;
@@ -128,10 +112,10 @@ footer .footerLeft li.createYourPlan {
   margin-right: 0;
 }
 footer .footerLeft li a {
-  color: #83888F;
+  color: #83888f;
 }
 footer .footerLeft li a:hover {
-  color: #FEFCF7;
+  color: #fefcf7;
 }
 footer #socialMedia ul {
   display: flex;
@@ -144,5 +128,5 @@ footer #socialMedia ul li.instagram {
   margin-right: 0;
 }
 footer #socialMedia ul li a:hover path {
-  fill: #FDD6BA;
+  fill: #fdd6ba;
 }/*# sourceMappingURL=footer.css.map */

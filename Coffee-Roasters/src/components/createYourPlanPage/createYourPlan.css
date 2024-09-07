@@ -86,8 +86,8 @@ ul {
   background-color: #e2dedb;
 }
 
-#whiteCup {
-  background-image: url("/images/image-hero-whitecup.jpg");
+#hero-blackcup {
+  background-image: url("/images/image-hero-blackcup.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
@@ -96,66 +96,22 @@ ul {
   border-radius: 10px;
   display: flex;
   align-items: center;
+  margin-bottom: 168px;
 }
 
-#commitmentContainer {
-  display: flex;
-  align-items: center;
-  margin: 168px 85px;
-}
-#commitmentContainer img {
-  border-radius: 10px;
-  width: 445px;
-  height: 520px;
-  background-repeat: no-repeat;
-  margin-right: 125px;
-  padding: 0;
-}
-#commitmentContainer #commitmentPresentation h2 {
-  color: #333d4b;
-}
-#commitmentContainer #commitmentPresentation .commitmentParagraph {
-  color: #333d4b;
-  width: 540px;
-}
-
-#qualityContainer {
-  display: flex;
+#stepsContainer {
   background-color: #2c343e;
   border-radius: 10px;
-  height: 474px;
-  margin-top: 256px;
-  margin-bottom: 168px;
-  padding: 0 80px;
-  gap: 125px;
 }
-#qualityContainer #qualityPresentation {
+#stepsContainer h4 {
+  display: none;
+}
+#stepsContainer #steps {
+  padding: 100px 118px;
+}
+#stepsContainer h3 {
   color: #fefcf7;
-  padding-top: 85px;
 }
-#qualityContainer #qualityPresentation p {
-  font-size: 16px;
-  line-height: 26px;
-}
-#qualityContainer img {
-  border-radius: 10px;
-  margin-top: -85px;
-  margin-bottom: 85px;
-}
-
-#headquartersContainer {
-  padding: 0 120px;
-  margin-bottom: 168px;
-}
-#headquartersContainer h4 {
-  color: #83888f;
-  margin-bottom: 72px;
-}
-#headquartersContainer #headquarters {
-  color: #333d4b;
-  display: flex;
-  justify-content: space-between;
-}
-#headquartersContainer #headquarters .country p {
-  text-align: left;
-}/*# sourceMappingURL=aboutUs.css.map */
+#stepsContainer p {
+  color: #fefcf7;
+}/*# sourceMappingURL=createYourPlan.css.map */

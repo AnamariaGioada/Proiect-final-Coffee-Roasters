@@ -14,17 +14,17 @@
 body {
   line-height: 26px;
   font-size: 16px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 #PageContainer {
   margin: 0 auto;
-  width: 1280px;
+  width: 1200px;
 }
 
 a {
   text-decoration: none;
-  color: #83888F;
+  color: #83888f;
 }
 
 h1 {
@@ -45,61 +45,45 @@ h3 {
 h4 {
   font-size: 24px;
   line-height: 32px;
-  color: #333D4B;
+  color: #333d4b;
 }
 
 ul {
   list-style: none;
 }
 
-.primaryButton {
-  width: 217px;
-  height: 56px;
-  background-color: #0E8784;
-  color: #FEFCF7;
-  font-size: 18px;
-  line-height: 25px;
-  border-radius: 10px;
-  border: none;
+#heroContent {
+  width: 632px;
+  padding: 0 86px;
+  box-sizing: border-box;
+  color: #fefcf7;
 }
-.primaryButton:hover {
-  background-color: #66D2CF;
+#heroContent h1 {
+  margin-top: 0;
 }
-.primaryButton:disabled {
-  background-color: #E2DEDB;
+#heroContent .presentationParagraph {
+  color: #fefcf7;
 }
 
-#stepsContainer {
-  margin-bottom: 88px;
-}
-#stepsContainer .stepsTitle {
-  color: #83888F;
-  margin-left: 40px;
-}
-#stepsContainer #steps {
+.primaryButton {
   display: flex;
-  color: #333D4B;
+  justify-content: center;
+  align-items: center;
+  width: 217px;
+  height: 56px;
+  background-color: #0e8784;
+  border-radius: 6px;
+  border: none;
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: 700;
+  color: #fefcf7;
 }
-#stepsContainer #steps li {
-  margin-top: 80px;
-  border-top: 1px solid #FDD6BA;
-  padding-right: 96px;
+.primaryButton:hover {
+  background-color: #66d2cf;
 }
-#stepsContainer #steps li.thirdStep {
-  border-top: 0;
-}
-#stepsContainer #steps h1 {
-  color: #FDD6BA;
-  padding: 40px 0;
-}
-#stepsContainer #steps .circle {
-  width: 30px;
-  height: 30px;
-  border: solid #0E8784;
-  border-radius: 50%;
-  background-color: #FEFCF7;
-  position: absolute;
-  margin-top: -18px;
+.primaryButton:disabled {
+  background-color: #e2dedb;
 }
 
 #hero {
@@ -114,18 +98,6 @@ ul {
   align-items: center;
 }
 
-#heroContent {
-  width: 632px;
-  padding: 0px 86px;
-  box-sizing: border-box;
-  color: #FEFCF7;
-}
-#heroContent h1 {
-  margin-top: 0;
-}
-#heroContent .presentationParagraph {
-  color: rgba(254, 252, 247, 0.8);
-}
 #heroContent .primaryButton {
   margin-top: 56px;
 }
@@ -141,7 +113,7 @@ ul {
   top: 85px;
   font-size: 150px;
   line-height: 72px;
-  color: #83888F;
+  color: #83888f;
   width: 100%;
   text-align: center;
   letter-spacing: 5px;
@@ -178,11 +150,11 @@ ul {
   text-align: center;
 }
 #productListing ul li .productDescription .presentationParagraph {
-  color: #333D4B;
+  color: #333d4b;
 }
 
 #background {
-  background-color: #333D4B;
+  background-color: #2c343e;
   border-radius: 10px;
   height: 577px;
   margin-top: 200px;
@@ -196,7 +168,7 @@ ul {
 }
 #background #reasonToChoose h2 {
   padding-top: 200px;
-  color: #FEFCF7;
+  color: #fefcf7;
 }
 #background #reasonToChoose p {
   color: rgba(254, 252, 247, 0.8);
@@ -217,20 +189,20 @@ ul {
 .reasonsItem {
   width: 350px;
   height: 382px;
-  background-color: #0E8784;
+  background-color: #0e8784;
   border-radius: 10px;
   text-align: center;
-  color: #FEFCF7;
+  color: #fefcf7;
 }
-.reasonsItem img {
+.reasonsItem .icon {
   padding-top: 72px;
   align-items: center;
 }
-.reasonsItem img.truck {
+.reasonsItem .icon.truck {
   padding-bottom: 20px;
 }
 .reasonsItem h4 {
-  color: #FEFCF7;
+  color: #fefcf7;
 }
 .reasonsItem p {
   padding: 0 48px 48px 48px;

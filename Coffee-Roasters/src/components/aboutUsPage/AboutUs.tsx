@@ -11,8 +11,8 @@ function AboutUs() {
         <div id="heroContainer">
           <div id="whiteCup">
             <div id="heroContent">
-              <h2> About Us</h2>
-              <p className="aboutUsParagraph">
+              <h1> About Us</h1>
+              <p className="presetationParagraph">
                 Coffeeroasters began its journey of exotic discovery in 1999,
                 highlighting stories of coffee from around the world. We have
                 since been dedicated to bring the perfect cup - from bean to

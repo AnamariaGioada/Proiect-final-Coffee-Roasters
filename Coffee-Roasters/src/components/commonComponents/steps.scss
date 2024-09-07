@@ -1,0 +1,42 @@
+@import "../../styles/fonts";
+@import "../../styles/colors";
+@import "../../styles/common";
+
+#stepsContainer {
+  margin-bottom: 88px;
+  .stepsTitle {
+    color: $grey;
+    margin-left: 40px;
+  }
+
+  #steps {
+    display: flex;
+
+    color: $darkGreyBlue;
+
+    li {
+      margin-top: 80px;
+      border-top: 1px solid $paleOrange;
+      padding-right: 96px;
+
+      &.thirdStep {
+        border-top: 0;
+      }
+    }
+
+    h1 {
+      color: $paleOrange;
+      padding: 40px 0;
+    }
+
+    .circle {
+      width: 30px;
+      height: 30px;
+      border: solid $darkCyan;
+      border-radius: 50%;
+      background-color: transparent;
+      position: absolute;
+      margin-top: -18px;
+    }
+  }
+}

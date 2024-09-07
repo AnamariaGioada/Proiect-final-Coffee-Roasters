@@ -86,25 +86,35 @@ ul {
   background-color: #e2dedb;
 }
 
-#navigationBar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+#stepsContainer {
+  margin-bottom: 88px;
 }
-#navigationBar #menuList {
-  list-style: none;
-  display: flex;
-  line-height: 15px;
-  font-size: 12px;
-  font-weight: 550;
-}
-#navigationBar #menuList a {
+#stepsContainer .stepsTitle {
   color: #83888f;
+  margin-left: 40px;
 }
-#navigationBar #menuList a:hover {
+#stepsContainer #steps {
+  display: flex;
   color: #333d4b;
 }
-#navigationBar .aboutUs,
-#navigationBar .createYourPlan {
-  padding-left: 32px;
-}/*# sourceMappingURL=navBar.css.map */
+#stepsContainer #steps li {
+  margin-top: 80px;
+  border-top: 1px solid #fdd6ba;
+  padding-right: 96px;
+}
+#stepsContainer #steps li.thirdStep {
+  border-top: 0;
+}
+#stepsContainer #steps h1 {
+  color: #fdd6ba;
+  padding: 40px 0;
+}
+#stepsContainer #steps .circle {
+  width: 30px;
+  height: 30px;
+  border: solid #0e8784;
+  border-radius: 50%;
+  background-color: transparent;
+  position: absolute;
+  margin-top: -18px;
+}/*# sourceMappingURL=steps.css.map */
