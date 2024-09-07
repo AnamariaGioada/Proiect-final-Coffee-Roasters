@@ -1,4 +1,7 @@
 import "./home.scss";
+import CoffeeBean from "../SVG/coffeeBean.svg";
+import Gift from "../SVG/gift.svg";
+import Truck from "../SVG/truck.svg";
 
 function Home() {
   return (
@@ -84,11 +87,10 @@ function Home() {
         </div>
         <ul id="reasonsList">
           <li className="reasonsItem">
-            <img
-              className="coffee-bean"
-              src="/images/icon-coffee-bean.svg"
-              alt="Quality-coffee-bean icon"
-            />
+            <div className="icon coffee-bean">
+              <CoffeeBean />
+            </div>
+
             <h4 className="reasonName">Best quality</h4>
             <p className="reasonDescription">
               Discover an endless variety of the world’s best artisan coffee
@@ -96,11 +98,10 @@ function Home() {
             </p>
           </li>
           <li className="reasonsItem">
-            <img
-              className="gift"
-              src="/images/icon-gift.svg"
-              alt="Exclusive-benefits icon"
-            />
+            <div className="icon gift">
+              <Gift />
+            </div>
+
             <h4 className="reasonName">Exclusive benefits</h4>
             <p className="reasonDescription">
               Special offers and swag when you subscribe, including 30% off your
@@ -108,11 +109,10 @@ function Home() {
             </p>
           </li>
           <li className="reasonsItem">
-            <img
-              className="truck"
-              src="/images/icon-truck.svg"
-              alt="Shipping icon"
-            />
+            <div className="icon truck">
+              <Truck />
+            </div>
+
             <h4 className="reasonName">Free shipping</h4>
             <p className="reasonDescription">
               We cover the cost and coffee is delivered fast. Peak freshness:
