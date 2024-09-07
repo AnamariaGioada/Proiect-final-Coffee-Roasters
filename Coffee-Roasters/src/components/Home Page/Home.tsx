@@ -1,12 +1,8 @@
-import Footer from "../Common Components/Footer";
-import NavBar from "../Common Components/NavBar";
 import "./home.scss";
 
 function Home() {
   return (
-    <div id="PageContainer">
-      <NavBar />
-
+    <>
       {/* Hero Container  */}
       <div id="heroContainer">
         <div id="hero">
@@ -170,9 +166,7 @@ function Home() {
       <div className="button">
         <button className="primaryButton">Create your plan</button>
       </div>
-
-      <Footer />
-    </div>
+    </>
   );
 }
 

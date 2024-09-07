@@ -1,5 +1,3 @@
-import Footer from "../Common Components/Footer";
-import NavBar from "../Common Components/NavBar";
 import "./aboutUs.scss";
 import Uk from "../SVG/uk.svg";
 import Canada from "../SVG/canada.svg";
@@ -7,9 +5,7 @@ import Australia from "../SVG/australia.svg";
 
 function AboutUs() {
   return (
-    <div id="PageContainer">
-      <NavBar />
-
+    <>
       {/* About Us  */}
       <div id="aboutHeroContainer">
         <div id="heroContainer">
@@ -73,31 +69,30 @@ function AboutUs() {
             <h3>United Kingdom</h3>
             <p>68 Asfordby Rd </p>
             <p>Alcaston</p>
-            <p> SY6 1YA</p>
-            <p> +44 1241 918425</p>
+            <p>SY6 1YA</p>
+            <p>+44 1241 918425</p>
           </div>
 
           <div className="country canada">
             <Canada />
             <h3>Canada</h3>
             <p>1528 Eglinton Avenue</p>
-            <p> Toronto</p>
-            <p> Ontario M4P 1A6</p>
-            <p> +1 416 485 2997</p>
+            <p>Toronto</p>
+            <p>Ontario M4P 1A6</p>
+            <p>+1 416 485 2997</p>
           </div>
 
           <div className="country australia">
             <Australia />
             <h3>Australia</h3>
             <p>36 Swanston Street</p>
-            <p> Kewell</p>
-            <p> Victoria</p>
-            <p> +61 4 9928 3629</p>
+            <p>Kewell</p>
+            <p>Victoria</p>
+            <p>+61 4 9928 3629</p>
           </div>
         </div>
       </div>
-      <Footer />
-    </div>
+    </>
   );
 }
 

@@ -34,7 +34,7 @@
 #commitmentContainer {
   display: flex;
   align-items: center;
-  margin: 165px 85px;
+  margin: 168px 85px;
 
   img {
     border-radius: $borderRadius;
@@ -62,7 +62,8 @@
   background-color: $panelBackground;
   border-radius: $borderRadius;
   height: 474px;
-  margin: 168px 0;
+  margin-top: 256px;
+  margin-bottom: 168px;
   padding: 0 80px;
   gap: 125px;
 
