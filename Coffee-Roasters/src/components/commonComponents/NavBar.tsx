@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
 import "./navBar.scss";
+import Logo from "../SVG/logo.svg";
 
 function NavBar() {
   return (
     <nav id="navigationBar">
       <div className="logo">
-        <img src="/images/logo.svg" alt="Coffe Roasters logo" />
+        <Logo />
       </div>
       <div className="menu">
         <ul id="menuList">

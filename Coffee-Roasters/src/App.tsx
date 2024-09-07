@@ -1,9 +1,9 @@
 import Home from "./components/Home Page/Home";
-import AboutUs from "./components/About Us Page/AboutUs";
-import CreateYourPlan from "./components/Create Your Plan Page/CreateYourPlan";
+import AboutUs from "./components/aboutUsPage/AboutUs";
+import CreateYourPlan from "./components/createYourPlanPage/CreateYourPlan";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
-import NavBar from "./components/Common Components/NavBar";
-import Footer from "./components/Common Components/Footer";
+import NavBar from "./components/commonComponents/NavBar";
+import Footer from "./components/commonComponents/Footer";
 function App() {
   return (
     <div id="PageContainer">

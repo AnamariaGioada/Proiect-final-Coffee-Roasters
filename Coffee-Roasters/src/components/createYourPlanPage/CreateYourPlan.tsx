@@ -1,5 +1,5 @@
-import Footer from "../Common Components/Footer";
-import NavBar from "../Common Components/NavBar";
+import Footer from "../commonComponents/Footer";
+import NavBar from "../commonComponents/NavBar";
 
 function CreateYourPlan() {
   return (
