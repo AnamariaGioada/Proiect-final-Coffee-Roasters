@@ -47,15 +47,19 @@ ul {
 
 // Primary Button
 .primaryButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 217px;
   height: 56px;
   background-color: $darkCyan;
+  border-radius: 6px;
+  border: none;
   @extend .fraunces_9pt-black;
-  color: $lightCream;
   font-size: 18px;
   line-height: 25px;
-  border-radius: $borderRadius;
-  border: none;
+  font-weight: 700;
+  color: $lightCream;
 
   &:hover {
     background-color: $hoverButton;

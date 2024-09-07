@@ -2,6 +2,7 @@ import "./home.scss";
 import CoffeeBean from "../SVG/coffeeBean.svg";
 import Gift from "../SVG/gift.svg";
 import Truck from "../SVG/truck.svg";
+import PrimaryAnchor from "../commonComponents/PrimaryAnchor";
 
 function Home() {
   return (
@@ -16,9 +17,9 @@ function Home() {
               expertly curated artisan coffees from our best roasters delivered
               directly to your door, at your schedule.
             </p>
-            <a href="" target="_blank">
-              <button className="primaryButton">Create your plan</button>
-            </a>
+            <PrimaryAnchor to="/create-your-plan">
+              Create your plan
+            </PrimaryAnchor>
           </div>
         </div>
       </div>
@@ -164,7 +165,7 @@ function Home() {
 
       {/* <!-- Create your plan button --> */}
       <div className="button">
-        <button className="primaryButton">Create your plan</button>
+        <PrimaryAnchor to="/create-your-plan">Create your plan</PrimaryAnchor>
       </div>
     </>
   );
