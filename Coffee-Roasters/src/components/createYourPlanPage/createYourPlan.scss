@@ -17,14 +17,19 @@
   margin-bottom: 168px;
 }
 
-#stepsContainer {
+.stepsContainer.dark {
   background-color: $panelBackground;
   border-radius: $borderRadius;
   h4 {
     display: none;
   }
   #steps {
-    padding: 100px 118px;
+    padding: 0 100px;
+    padding-bottom: 70px;
+    padding-top: 12px;
+    .circle {
+      background-color: $panelBackground;
+    }
   }
   h3 {
     color: $lightCream;

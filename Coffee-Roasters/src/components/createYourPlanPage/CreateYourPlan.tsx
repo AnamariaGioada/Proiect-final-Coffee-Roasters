@@ -16,7 +16,7 @@ function CreateYourPlan() {
           </div>
         </div>
       </div>
-      <div id="stepsContainer">
+      <div className="dark stepsContainer">
         <Steps />
       </div>
     </>

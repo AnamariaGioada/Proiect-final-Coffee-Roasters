@@ -86,6 +86,39 @@ ul {
   background-color: #e2dedb;
 }
 
+.stepsContainer {
+  margin-bottom: 88px;
+}
+.stepsContainer .stepsTitle {
+  color: #83888f;
+  margin-left: 40px;
+}
+.stepsContainer #steps {
+  display: flex;
+  color: #333d4b;
+}
+.stepsContainer #steps li {
+  margin-top: 80px;
+  border-top: 1px solid #fdd6ba;
+  padding-right: 96px;
+}
+.stepsContainer #steps li.thirdStep {
+  border-top: 0;
+}
+.stepsContainer #steps h1 {
+  color: #fdd6ba;
+  padding: 40px 0;
+}
+.stepsContainer #steps .circle {
+  width: 30px;
+  height: 30px;
+  border: solid #0e8784;
+  border-radius: 50%;
+  background-color: #fefcf7;
+  position: absolute;
+  margin-top: -18px;
+}
+
 #hero-blackcup {
   background-image: url("/images/image-hero-blackcup.jpg");
   background-size: cover;
@@ -99,19 +132,24 @@ ul {
   margin-bottom: 168px;
 }
 
-#stepsContainer {
+.stepsContainer.dark {
   background-color: #2c343e;
   border-radius: 10px;
 }
-#stepsContainer h4 {
+.stepsContainer.dark h4 {
   display: none;
 }
-#stepsContainer #steps {
-  padding: 100px 118px;
+.stepsContainer.dark #steps {
+  padding: 0 100px;
+  padding-bottom: 70px;
+  padding-top: 12px;
 }
-#stepsContainer h3 {
+.stepsContainer.dark #steps .circle {
+  background-color: #2c343e;
+}
+.stepsContainer.dark h3 {
   color: #fefcf7;
 }
-#stepsContainer p {
+.stepsContainer.dark p {
   color: #fefcf7;
 }/*# sourceMappingURL=createYourPlan.css.map */

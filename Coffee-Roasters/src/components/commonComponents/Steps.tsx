@@ -1,5 +1,3 @@
-import "./steps.scss";
-
 function Steps() {
   return (
     <div id="stepsContainer">

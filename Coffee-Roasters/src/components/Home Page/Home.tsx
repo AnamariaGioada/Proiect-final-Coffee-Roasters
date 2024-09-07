@@ -125,7 +125,7 @@ function Home() {
       </div>
 
       {/* <!-- How it works --> */}
-      <div id="stepsContainer">
+      <div className="stepsContainer">
         <Steps />
       </div>
 
