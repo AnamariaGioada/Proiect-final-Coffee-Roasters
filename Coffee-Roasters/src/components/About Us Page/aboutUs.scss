@@ -62,7 +62,7 @@
   background-color: $panelBackground;
   border-radius: $borderRadius;
   height: 474px;
-  margin: 162px 0;
+  margin: 168px 0;
   padding: 0 80px;
   gap: 125px;
 
@@ -86,7 +86,21 @@
 // Our headquarters
 
 #headquartersContainer {
+  padding: 0 120px;
+  margin-bottom: 168px;
   h4 {
     color: $grey;
+    margin-bottom: 72px;
+  }
+  #headquarters {
+    color: $darkGreyBlue;
+    display: flex;
+    justify-content: space-between;
+
+    .country {
+      p {
+        text-align: left;
+      }
+    }
   }
 }
