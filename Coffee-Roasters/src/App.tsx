@@ -4,6 +4,8 @@ import CreateYourPlan from "./components/createYourPlanPage/CreateYourPlan";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import NavBar from "./components/commonComponents/NavBar";
 import Footer from "./components/commonComponents/Footer";
+import Test from "./components/commonComponents/Test";
+
 function App() {
   return (
     <div id="PageContainer">
@@ -13,6 +15,7 @@ function App() {
           <Route path="/" Component={Home} />
           <Route path="about-us" Component={AboutUs} />
           <Route path="create-your-plan" Component={CreateYourPlan} />
+          <Route path="test" Component={Test} />
         </Routes>
         <Footer />
       </BrowserRouter>

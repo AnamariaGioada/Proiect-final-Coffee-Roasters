@@ -1,0 +1,31 @@
+@import "../../styles/fonts";
+@import "../../styles/colors";
+@import "../../styles/common";
+
+.card {
+  width: 172px;
+  height: 166px;
+  background-color: $cardColor;
+  border-radius: $borderRadius;
+  color: $darkGreyBlue;
+  padding: 0 28px;
+  padding-bottom: 84px;
+
+  h4 {
+    margin-top: 32px;
+    margin-bottom: 24px;
+  }
+
+  &.card.selected {
+    background-color: $darkCyan;
+    color: $white;
+    h4 {
+      color: $white;
+    }
+  }
+}
+
+.card:hover {
+  background-color: $paleOrange;
+  cursor: pointer;
+}
