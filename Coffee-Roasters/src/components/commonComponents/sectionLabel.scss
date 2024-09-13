@@ -1,0 +1,45 @@
+@import "../../styles/fonts";
+@import "../../styles/colors";
+@import "../../styles/common";
+
+.section-label {
+  display: flex;
+  cursor: pointer;
+  .order {
+    padding-right: 15px;
+    color: $disabledGrey;
+  }
+  .name {
+    color: $mediumGrey;
+  }
+
+  &:hover {
+    .order {
+      color: $mediumGrey;
+    }
+    .name {
+      color: $grey;
+    }
+  }
+
+  &:active,
+  &.selected {
+    .order {
+      color: $darkCyan;
+    }
+    .name {
+      color: $darkGreyBlue;
+    }
+  }
+  &.disabled {
+    opacity: 0.6;
+    &:hover {
+      .order {
+        color: $disabledGrey;
+      }
+      .name {
+        color: $mediumGrey;
+      }
+    }
+  }
+}

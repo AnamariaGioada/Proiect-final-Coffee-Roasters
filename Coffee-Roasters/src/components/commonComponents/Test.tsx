@@ -1,12 +1,32 @@
 import "./test.scss";
 import Card from "./Card";
-import Field from "./Field";
+import SectionLabel from "./SectionLabel";
+import Section from "./Section";
 
 export default function Test() {
   return (
     <>
-      <div className="fields">
-        <Field orderNumber="01" name="Preferences" />
+      <div className="section-labels">
+        <SectionLabel orderNumber="01" name="Preferences" />
+        <SectionLabel orderNumber="01" name="Preferences" selected={true} />
+        <SectionLabel orderNumber="01" name="Preferences" disabled={true} />
+      </div>
+      <div className="section">
+        <Section
+          question="How do you drink your coffee?"
+          isOpen={false}
+          disabled={false}
+        />
+        <Section
+          question="How do you drink your coffee?"
+          isOpen={true}
+          disabled={false}
+        />
+        <Section
+          question="How do you drink your coffee?"
+          isOpen={false}
+          disabled={true}
+        />
       </div>
       <div className="cards">
         <Card

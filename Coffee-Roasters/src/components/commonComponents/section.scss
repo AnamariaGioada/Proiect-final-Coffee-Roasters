@@ -1,0 +1,24 @@
+@import "../../styles/fonts";
+@import "../../styles/colors";
+@import "../../styles/common";
+
+.section {
+  .isOpen {
+    display: inline-block;
+    transform: rotate(180deg);
+  }
+  .disabled {
+    opacity: 0.6;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+  .section-elements {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    .question {
+      color: $grey;
+    }
+  }
+}
