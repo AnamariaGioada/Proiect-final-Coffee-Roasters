@@ -1,7 +1,9 @@
 import "./test.scss";
-import Card from "./Card";
-import SectionLabel from "./SectionLabel";
-import Section from "./Section";
+import Card from "../createYourPlanPage/Card";
+import SectionLabel from "../createYourPlanPage/SectionLabel";
+import Section from "../createYourPlanPage/Section";
+import SummaryParagraph from "../createYourPlanPage/SummaryParagraph";
+import PrimaryButton from "./PrimaryButton";
 
 export default function Test() {
   return (
@@ -39,6 +41,19 @@ export default function Test() {
           text="Compatible with Nespresso systems and similar brewers"
           selected={true}
         />
+      </div>
+      <div className="summary">
+        <SummaryParagraph
+          preference="Capsule"
+          beanType="____"
+          grindOption="____"
+          quantity="____"
+          deliveries="____"
+        />
+      </div>
+      <div>
+        <PrimaryButton disabled={true}>Create my plan!</PrimaryButton>
+        <PrimaryButton>Create my plan!</PrimaryButton>
       </div>
     </>
   );

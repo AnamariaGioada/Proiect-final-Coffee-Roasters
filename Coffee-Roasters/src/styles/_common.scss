@@ -77,10 +77,12 @@ ul {
 
   &:hover {
     background-color: $hoverButton;
+    cursor: pointer;
   }
 
   &:disabled {
     background-color: $disabledButton;
+    cursor: unset;
   }
 }
 
