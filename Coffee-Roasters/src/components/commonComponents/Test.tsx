@@ -4,6 +4,7 @@ import SectionLabel from "../createYourPlanPage/SectionLabel";
 import Section from "../createYourPlanPage/Section";
 import SummaryParagraph from "../createYourPlanPage/SummaryParagraph";
 import PrimaryButton from "./PrimaryButton";
+import OrderPopup from "./OrderSummaryPopup";
 
 export default function Test() {
   return (
@@ -54,6 +55,9 @@ export default function Test() {
       <div>
         <PrimaryButton disabled={true}>Create my plan!</PrimaryButton>
         <PrimaryButton>Create my plan!</PrimaryButton>
+      </div>
+      <div>
+        <OrderPopup />
       </div>
     </>
   );

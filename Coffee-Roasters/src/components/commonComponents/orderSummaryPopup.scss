@@ -1,0 +1,12 @@
+@import "../../styles/fonts";
+@import "../../styles/colors";
+@import "../../styles/common";
+
+#order-summary-container {
+  height: auto;
+  width: 540px;
+  .title {
+    background-color: $darkGreyBlue;
+    color: $white;
+  }
+}
