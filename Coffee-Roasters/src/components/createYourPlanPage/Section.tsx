@@ -1,5 +1,6 @@
 import "./section.scss";
 import Arrow from "../SVG/arrow.svg";
+import { Children } from "react";
 
 interface SectionProps {
   question: string;
@@ -11,6 +12,7 @@ function Section({
   question,
   isOpen,
   disabled,
+  children,
 }: React.PropsWithChildren<SectionProps>) {
   return (
     <div className={`section ${disabled ? "disabled" : ""}`}>
@@ -20,6 +22,7 @@ function Section({
           <Arrow />
         </span>
       </div>
+      <div className="cards">{children}</div>
     </div>
   );
 }

@@ -3,6 +3,10 @@
 @import "../../styles/common";
 
 .section {
+  margin-bottom: 60px;
+  h2 {
+    margin: 0;
+  }
   .isOpen {
     display: inline-block;
     transform: rotate(180deg);
@@ -17,8 +21,14 @@
     align-items: center;
     display: flex;
     justify-content: space-between;
+    margin-bottom: 56px;
     .question {
       color: $grey;
     }
   }
+}
+.cards {
+  width: 100%;
+  display: flex;
+  gap: 20px;
 }

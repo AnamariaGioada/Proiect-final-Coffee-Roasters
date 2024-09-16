@@ -38,3 +38,16 @@
     color: $lightCream;
   }
 }
+
+#section-columns {
+  display: grid;
+  grid-template-columns: 2fr 6fr;
+  gap: 90px;
+  margin: 168px 85px;
+}
+
+.primary-anchor {
+  margin-top: 40px;
+  display: flex;
+  justify-content: flex-end;
+}
