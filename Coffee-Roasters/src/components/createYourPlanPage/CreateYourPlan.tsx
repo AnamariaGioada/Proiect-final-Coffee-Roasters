@@ -5,7 +5,29 @@ import SummaryParagraph from "./SummaryParagraph";
 import Section from "./Section";
 import Card from "./Card";
 import PrimaryAnchor from "../commonComponents/PrimaryAnchor";
+import { useState } from "react";
+
 function CreateYourPlan() {
+  const [currentSection, setCurrentSection] = useState("preference");
+  const [sections, setSections] = useState({
+    preference: { isOpen: true, valueSelected: null },
+    beanType: { isOpen: false, valueSelected: null },
+    quantity: { isOpen: false, valueSelected: null },
+    grindOption: { isOpen: false, valueSelected: null },
+    deliveries: { isOpen: false, valueSelected: null },
+  });
+
+  const toggleSection = (section) => {
+    sections[section].isOpen = !sections[section].isOpen;
+    setSections(sections);
+  };
+
+  const chooseOption = (section, value) => {
+    sections[section].valueSelected = value;
+    console.log(sections);
+    setSections(sections);
+  };
+
   return (
     <>
       {/* Create plan hero */}
@@ -36,112 +58,118 @@ function CreateYourPlan() {
         </div>
         <div className="sections">
           <Section
+            onClick={() => {
+              toggleSection("preference");
+            }}
             question="How do you drink your coffee?"
-            isOpen={false}
+            isOpen={sections.preference.isOpen}
             disabled={false}
           >
             <Card
+              onClick={() => {
+                chooseOption("preference", "capsule");
+              }}
               title="Capsule"
               text="Compatible with Nespresso systems and similar brewers"
-              selected={false}
+              selected={sections.preference.valueSelected === "capsule"}
             />
             <Card
               title="Filter"
               text="For pour over or drip methods like Aeropress, Chemex, and V60"
-              selected={false}
+              selected={sections.preference.valueSelected === "filter"}
             />
             <Card
               title="Espresso"
               text="Dense and finely ground beans for an intense, flavorful experience"
-              selected={false}
+              selected={sections.preference.valueSelected === "espresso"}
             />
           </Section>
 
           <Section
             question="What type of coffee?"
-            isOpen={false}
+            isOpen={sections.beanType.isOpen}
             disabled={false}
           >
             <Card
               title="Single Origin"
               text="Distinct, high quality coffee from a specific family-owned farm"
-              selected={false}
+              selected={sections.beanType.valueSelected === "singleOrigin"}
             />
             <Card
               title="Decaf"
               text="Just like regular coffee, except the caffeine has been removed"
-              selected={false}
+              selected={sections.beanType.valueSelected === "decaf"}
             />
             <Card
               title="Blended"
               text="Combination of two or three dark roasted beans of organic coffees"
-              selected={false}
+              selected={sections.beanType.valueSelected === "blended"}
             />
           </Section>
 
           <Section
             question="How much would you like?"
-            isOpen={false}
+            isOpen={sections.quantity.isOpen}
             disabled={false}
           >
             <Card
               title="250g"
               text="Perfect for the solo drinker. Yields about 12 delicious cups."
-              selected={false}
+              selected={sections.quantity.valueSelected === "250g"}
             />
             <Card
               title="500g"
               text="Perfect option for a couple. Yields about 40 delectable cups."
-              selected={false}
+              selected={sections.quantity.valueSelected === "500g"}
             />
             <Card
               title="1000g"
               text="Perfect for offices and events. Yields about 90 delightful cups."
-              selected={false}
+              selected={sections.quantity.valueSelected === "1000g"}
             />
           </Section>
 
           <Section
             question="Want us to grind them?"
-            isOpen={false}
+            isOpen={sections.grindOption.isOpen}
             disabled={false}
           >
             <Card
               title="Wholebean"
               text="Best choice if you cherish the full sensory experience"
-              selected={false}
+              selected={sections.grindOption.valueSelected === "wholebean"}
             />
             <Card
               title="Filter"
               text="For drip or pour-over coffee methods such as V60 or Aeropress"
-              selected={false}
+              selected={sections.grindOption.valueSelected === "grindFilter"}
             />
             <Card
               title="Cafetiére"
               text="Course ground beans specially suited for french press coffee"
-              selected={false}
+              selected={sections.grindOption.valueSelected === "cafetiere"}
             />
           </Section>
 
           <Section
             question="How often should we deliver?"
-            isOpen={false}
+            isOpen={sections.deliveries.isOpen}
             disabled={false}
           >
             <Card
               title="Every week"
               text="$7.20 per shipment. Includes free first-class shipping."
-              selected={false}
+              selected={sections.deliveries.valueSelected === "weekly"}
             />
             <Card
               title="Every 2 weeks"
               text="$9.60 per shipment. Includes free priority shipping."
-              selected={false}
+              selected={sections.deliveries.valueSelected === "bimonthly"}
             />
             <Card
               title="Every month"
               text="$12.00 per shipment. Includes free priority shipping."
-              selected={false}
+              selected={sections.deliveries.valueSelected === "monthly"}
             />
           </Section>
 
