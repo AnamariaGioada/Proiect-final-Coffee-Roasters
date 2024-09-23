@@ -17,27 +17,42 @@ type SectionKey =
 function CreateYourPlan() {
   const [currentSection, setCurrentSection] = useState("preference");
 
-  const [preference, setPreference] = useState({
+  const [preference, setPreference] = useState<{
+    isOpen: boolean;
+    valueSelected: string | null;
+  }>({
     isOpen: true,
     valueSelected: null,
   });
 
-  const [beanType, setBeanType] = useState({
+  const [beanType, setBeanType] = useState<{
+    isOpen: boolean;
+    valueSelected: string | null;
+  }>({
     isOpen: false,
     valueSelected: null,
   });
 
-  const [quantity, setQuantity] = useState({
+  const [quantity, setQuantity] = useState<{
+    isOpen: boolean;
+    valueSelected: string | null;
+  }>({
     isOpen: false,
     valueSelected: null,
   });
 
-  const [grindOption, setGrindOption] = useState({
+  const [grindOption, setGrindOption] = useState<{
+    isOpen: boolean;
+    valueSelected: string | null;
+  }>({
     isOpen: false,
     valueSelected: null,
   });
 
-  const [deliveries, setDeliveries] = useState({
+  const [deliveries, setDeliveries] = useState<{
+    isOpen: boolean;
+    valueSelected: string | null;
+  }>({
     isOpen: false,
     valueSelected: null,
   });
@@ -83,28 +98,28 @@ function CreateYourPlan() {
             <div className="cards">
               <Card
                 onClick={() => {
-                  setPreference({ ...preference, valueSelected: "capsule" });
+                  setPreference({ ...preference, valueSelected: "Capsules" });
                 }}
-                title="Capsule"
+                title="Capsules"
                 text="Compatible with Nespresso systems and similar brewers"
-                selected={preference.valueSelected === "capsule"}
+                selected={preference.valueSelected === "Capsules"}
               />
               <Card
                 onClick={() => {
-                  setPreference({ ...preference, valueSelected: "filter" });
+                  setPreference({ ...preference, valueSelected: "Filter" });
                 }}
                 title="Filter"
                 text="For pour over or drip methods like Aeropress, Chemex, and V60"
-                selected={preference.valueSelected === "filter"}
+                selected={preference.valueSelected === "Filter"}
               />
 
               <Card
                 onClick={() => {
-                  setPreference({ ...preference, valueSelected: "espresso" });
+                  setPreference({ ...preference, valueSelected: "Espresso" });
                 }}
                 title="Espresso"
                 text="Dense and finely ground beans for an intense, flavorful experience"
-                selected={preference.valueSelected === "espresso"}
+                selected={preference.valueSelected === "Espresso"}
               />
             </div>
           ) : null}
@@ -121,27 +136,27 @@ function CreateYourPlan() {
             <div className="cards">
               <Card
                 onClick={() => {
-                  setBeanType({ ...beanType, valueSelected: "singleOrigin" });
+                  setBeanType({ ...beanType, valueSelected: "Single Origin" });
                 }}
                 title="Single Origin"
                 text="Distinct, high quality coffee from a specific family-owned farm"
-                selected={beanType.valueSelected === "singleOrigin"}
+                selected={beanType.valueSelected === "Single Origin"}
               />
               <Card
                 onClick={() => {
-                  setBeanType({ ...beanType, valueSelected: "decaf" });
+                  setBeanType({ ...beanType, valueSelected: "Decaf" });
                 }}
                 title="Decaf"
                 text="Just like regular coffee, except the caffeine has been removed"
-                selected={beanType.valueSelected === "decaf"}
+                selected={beanType.valueSelected === "Decaf"}
               />
               <Card
                 onClick={() => {
-                  setBeanType({ ...beanType, valueSelected: "blended" });
+                  setBeanType({ ...beanType, valueSelected: "Blended" });
                 }}
                 title="Blended"
                 text="Combination of two or three dark roasted beans of organic coffees"
-                selected={beanType.valueSelected === "blended"}
+                selected={beanType.valueSelected === "Blended"}
               />
             </div>
           ) : null}
@@ -158,27 +173,27 @@ function CreateYourPlan() {
             <div className="cards">
               <Card
                 onClick={() => {
-                  setQuantity({ ...quantity, valueSelected: "250g" });
+                  setQuantity({ ...quantity, valueSelected: "250 g" });
                 }}
-                title="250g"
+                title="250 g"
                 text="Perfect for the solo drinker. Yields about 12 delicious cups."
-                selected={quantity.valueSelected === "250g"}
+                selected={quantity.valueSelected === "250 g"}
               />
               <Card
                 onClick={() => {
-                  setQuantity({ ...quantity, valueSelected: "500g" });
+                  setQuantity({ ...quantity, valueSelected: "500 g" });
                 }}
-                title="500g"
+                title="500 g"
                 text="Perfect option for a couple. Yields about 40 delectable cups."
-                selected={quantity.valueSelected === "500g"}
+                selected={quantity.valueSelected === "500 g"}
               />
               <Card
                 onClick={() => {
-                  setQuantity({ ...quantity, valueSelected: "1000g" });
+                  setQuantity({ ...quantity, valueSelected: "1000 g" });
                 }}
-                title="1000g"
+                title="1000 g"
                 text="Perfect for offices and events. Yields about 90 delightful cups."
-                selected={quantity.valueSelected === "1000g"}
+                selected={quantity.valueSelected === "1000 g"}
               />
             </div>
           ) : null}
@@ -189,7 +204,7 @@ function CreateYourPlan() {
             }}
             question="Want us to grind them?"
             isOpen={grindOption.isOpen}
-            disabled={false}
+            disabled={preference.valueSelected === "Capsules"}
           />
           {grindOption.isOpen ? (
             <div className="cards">
@@ -197,34 +212,34 @@ function CreateYourPlan() {
                 onClick={() => {
                   setGrindOption({
                     ...grindOption,
-                    valueSelected: "wholebean",
+                    valueSelected: "Wholebean",
                   });
                 }}
                 title="Wholebean"
                 text="Best choice if you cherish the full sensory experience"
-                selected={grindOption.valueSelected === "wholebean"}
+                selected={grindOption.valueSelected === "Wholebean"}
               />
               <Card
                 onClick={() => {
                   setGrindOption({
                     ...grindOption,
-                    valueSelected: "grindFilter",
+                    valueSelected: "Filter",
                   });
                 }}
                 title="Filter"
                 text="For drip or pour-over coffee methods such as V60 or Aeropress"
-                selected={grindOption.valueSelected === "grindFilter"}
+                selected={grindOption.valueSelected === "Filter"}
               />
               <Card
                 onClick={() => {
                   setGrindOption({
                     ...grindOption,
-                    valueSelected: "cafetiere",
+                    valueSelected: "Cafetiére",
                   });
                 }}
                 title="Cafetiére"
                 text="Course ground beans specially suited for french press coffee"
-                selected={grindOption.valueSelected === "cafetiere"}
+                selected={grindOption.valueSelected === "Cafetiére"}
               />
             </div>
           ) : null}
@@ -243,34 +258,34 @@ function CreateYourPlan() {
                 onClick={() => {
                   setDeliveries({
                     ...deliveries,
-                    valueSelected: "weekly",
+                    valueSelected: "Every week",
                   });
                 }}
                 title="Every week"
                 text="$7.20 per shipment. Includes free first-class shipping."
-                selected={deliveries.valueSelected === "weekly"}
+                selected={deliveries.valueSelected === "Every week"}
               />
               <Card
                 onClick={() => {
                   setDeliveries({
                     ...deliveries,
-                    valueSelected: "bimonthly",
+                    valueSelected: "Every 2 weeks",
                   });
                 }}
                 title="Every 2 weeks"
                 text="$9.60 per shipment. Includes free priority shipping."
-                selected={deliveries.valueSelected === "bimonthly"}
+                selected={deliveries.valueSelected === "Every 2 weeks"}
               />
               <Card
                 onClick={() => {
                   setDeliveries({
                     ...deliveries,
-                    valueSelected: "monthly",
+                    valueSelected: "Every month",
                   });
                 }}
                 title="Every month"
                 text="$12.00 per shipment. Includes free priority shipping."
-                selected={deliveries.valueSelected === "monthly"}
+                selected={deliveries.valueSelected === "Every month"}
               />
             </div>
           ) : null}
@@ -278,7 +293,13 @@ function CreateYourPlan() {
           {/* Order summary */}
           <div className="summary-container">
             <p>ORDER SUMMARY</p>
-            <SummaryParagraph />
+            <SummaryParagraph
+              preference={preference.valueSelected}
+              beanType={beanType.valueSelected}
+              quantity={quantity.valueSelected}
+              grindOption={grindOption.valueSelected}
+              deliveries={deliveries.valueSelected}
+            />
           </div>
           <div className="primary-anchor">
             <PrimaryAnchor>Create my plan!</PrimaryAnchor>

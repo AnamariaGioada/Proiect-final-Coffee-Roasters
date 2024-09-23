@@ -12,12 +12,16 @@ function Section({
   question,
   isOpen,
   disabled,
-  children,
   onClick,
 }: React.PropsWithChildren<SectionProps>) {
   return (
     <div className={`section ${disabled ? "disabled" : ""}`}>
-      <div onClick={onClick} className="section-elements">
+      <div
+        onClick={() => {
+          !disabled && onClick();
+        }}
+        className="section-elements"
+      >
         <h2 className="question">{question}</h2>
         <span className={`${isOpen ? "isOpen" : ""}`}>
           <Arrow />
