@@ -40,10 +40,16 @@
 }
 
 #section-columns {
+  position: relative;
   display: grid;
   grid-template-columns: 2fr 6fr;
   gap: 90px;
   margin: 168px 85px;
+  .section-labels {
+    position: sticky;
+    top: 10px;
+    margin-top: 60px;
+  }
 }
 
 .primary-anchor {

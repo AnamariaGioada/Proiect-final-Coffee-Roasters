@@ -4,8 +4,8 @@ import SectionLabel from "./SectionLabel";
 import SummaryParagraph from "./SummaryParagraph";
 import Section from "./Section";
 import Card from "./Card";
-import PrimaryAnchor from "../commonComponents/PrimaryAnchor";
 import { useState } from "react";
+import PrimaryButton from "../commonComponents/PrimaryButton";
 
 type SectionKey =
   | "preference"
@@ -57,6 +57,9 @@ function CreateYourPlan() {
     valueSelected: null,
   });
 
+  function isGrindOptionDisabled() {
+    return preference.valueSelected === "Capsules";
+  }
   return (
     <>
       {/* Create plan hero */}
@@ -78,12 +81,55 @@ function CreateYourPlan() {
 
       {/* Sections columns */}
       <div id="section-columns">
-        <div className="section-labels">
-          <SectionLabel orderNumber="01" name="Preferences" />
-          <SectionLabel orderNumber="02" name="Bean Type" />
-          <SectionLabel orderNumber="03" name="Quantity" />
-          <SectionLabel orderNumber="04" name="Grind Option" />
-          <SectionLabel orderNumber="05" name="Deliveries" />
+        <div>
+          <div className="section-labels">
+            <SectionLabel
+              orderNumber="01"
+              name="Preferences"
+              selected={currentSection === "preference"}
+              onClick={() => {
+                setPreference({ ...preference, isOpen: true });
+                setCurrentSection("preference");
+              }}
+            />
+            <SectionLabel
+              orderNumber="02"
+              name="Bean Type"
+              selected={currentSection === "beanType"}
+              onClick={() => {
+                setBeanType({ ...beanType, isOpen: true });
+                setCurrentSection("beanType");
+              }}
+            />
+            <SectionLabel
+              orderNumber="03"
+              name="Quantity"
+              selected={currentSection === "quantity"}
+              onClick={() => {
+                setQuantity({ ...quantity, isOpen: true });
+                setCurrentSection("quantity");
+              }}
+            />
+            <SectionLabel
+              orderNumber="04"
+              name="Grind Option"
+              selected={currentSection === "grindOption"}
+              disabled={isGrindOptionDisabled()}
+              onClick={() => {
+                setGrindOption({ ...grindOption, isOpen: true });
+                setCurrentSection("grindOption");
+              }}
+            />
+            <SectionLabel
+              orderNumber="05"
+              name="Deliveries"
+              selected={currentSection === "deliveries"}
+              onClick={() => {
+                setDeliveries({ ...deliveries, isOpen: true });
+                setCurrentSection("deliveries");
+              }}
+            />
+          </div>
         </div>
         <div className="sections">
           <Section
@@ -99,6 +145,8 @@ function CreateYourPlan() {
               <Card
                 onClick={() => {
                   setPreference({ ...preference, valueSelected: "Capsules" });
+                  setBeanType({ ...beanType, isOpen: true });
+                  setCurrentSection("beanType");
                 }}
                 title="Capsules"
                 text="Compatible with Nespresso systems and similar brewers"
@@ -107,6 +155,8 @@ function CreateYourPlan() {
               <Card
                 onClick={() => {
                   setPreference({ ...preference, valueSelected: "Filter" });
+                  setBeanType({ ...beanType, isOpen: true });
+                  setCurrentSection("beanType");
                 }}
                 title="Filter"
                 text="For pour over or drip methods like Aeropress, Chemex, and V60"
@@ -116,6 +166,8 @@ function CreateYourPlan() {
               <Card
                 onClick={() => {
                   setPreference({ ...preference, valueSelected: "Espresso" });
+                  setBeanType({ ...beanType, isOpen: true });
+                  setCurrentSection("beanType");
                 }}
                 title="Espresso"
                 text="Dense and finely ground beans for an intense, flavorful experience"
@@ -137,6 +189,8 @@ function CreateYourPlan() {
               <Card
                 onClick={() => {
                   setBeanType({ ...beanType, valueSelected: "Single Origin" });
+                  setQuantity({ ...quantity, isOpen: true });
+                  setCurrentSection("quantity");
                 }}
                 title="Single Origin"
                 text="Distinct, high quality coffee from a specific family-owned farm"
@@ -145,6 +199,8 @@ function CreateYourPlan() {
               <Card
                 onClick={() => {
                   setBeanType({ ...beanType, valueSelected: "Decaf" });
+                  setQuantity({ ...quantity, isOpen: true });
+                  setCurrentSection("quantity");
                 }}
                 title="Decaf"
                 text="Just like regular coffee, except the caffeine has been removed"
@@ -153,6 +209,8 @@ function CreateYourPlan() {
               <Card
                 onClick={() => {
                   setBeanType({ ...beanType, valueSelected: "Blended" });
+                  setQuantity({ ...quantity, isOpen: true });
+                  setCurrentSection("quantity");
                 }}
                 title="Blended"
                 text="Combination of two or three dark roasted beans of organic coffees"
@@ -174,6 +232,16 @@ function CreateYourPlan() {
               <Card
                 onClick={() => {
                   setQuantity({ ...quantity, valueSelected: "250 g" });
+                  if (isGrindOptionDisabled()) {
+                    setDeliveries({ ...deliveries, isOpen: true });
+                    setCurrentSection("deliveries");
+                  } else {
+                    setGrindOption({
+                      ...grindOption,
+                      isOpen: true,
+                    });
+                    setCurrentSection("grindOption");
+                  }
                 }}
                 title="250 g"
                 text="Perfect for the solo drinker. Yields about 12 delicious cups."
@@ -182,6 +250,16 @@ function CreateYourPlan() {
               <Card
                 onClick={() => {
                   setQuantity({ ...quantity, valueSelected: "500 g" });
+                  if (isGrindOptionDisabled()) {
+                    setDeliveries({ ...deliveries, isOpen: true });
+                    setCurrentSection("deliveries");
+                  } else {
+                    setGrindOption({
+                      ...grindOption,
+                      isOpen: true,
+                    });
+                    setCurrentSection("grindOption");
+                  }
                 }}
                 title="500 g"
                 text="Perfect option for a couple. Yields about 40 delectable cups."
@@ -190,6 +268,16 @@ function CreateYourPlan() {
               <Card
                 onClick={() => {
                   setQuantity({ ...quantity, valueSelected: "1000 g" });
+                  if (isGrindOptionDisabled()) {
+                    setDeliveries({ ...deliveries, isOpen: true });
+                    setCurrentSection("deliveries");
+                  } else {
+                    setGrindOption({
+                      ...grindOption,
+                      isOpen: true,
+                    });
+                    setCurrentSection("grindOption");
+                  }
                 }}
                 title="1000 g"
                 text="Perfect for offices and events. Yields about 90 delightful cups."
@@ -204,7 +292,7 @@ function CreateYourPlan() {
             }}
             question="Want us to grind them?"
             isOpen={grindOption.isOpen}
-            disabled={preference.valueSelected === "Capsules"}
+            disabled={isGrindOptionDisabled()}
           />
           {grindOption.isOpen ? (
             <div className="cards">
@@ -214,6 +302,8 @@ function CreateYourPlan() {
                     ...grindOption,
                     valueSelected: "Wholebean",
                   });
+                  setDeliveries({ ...deliveries, isOpen: true });
+                  setCurrentSection("deliveries");
                 }}
                 title="Wholebean"
                 text="Best choice if you cherish the full sensory experience"
@@ -225,6 +315,8 @@ function CreateYourPlan() {
                     ...grindOption,
                     valueSelected: "Filter",
                   });
+                  setDeliveries({ ...deliveries, isOpen: true });
+                  setCurrentSection("deliveries");
                 }}
                 title="Filter"
                 text="For drip or pour-over coffee methods such as V60 or Aeropress"
@@ -236,6 +328,8 @@ function CreateYourPlan() {
                     ...grindOption,
                     valueSelected: "Cafetiére",
                   });
+                  setDeliveries({ ...deliveries, isOpen: true });
+                  setCurrentSection("deliveries");
                 }}
                 title="Cafetiére"
                 text="Course ground beans specially suited for french press coffee"
@@ -302,7 +396,24 @@ function CreateYourPlan() {
             />
           </div>
           <div className="primary-anchor">
-            <PrimaryAnchor>Create my plan!</PrimaryAnchor>
+            <PrimaryButton
+              onClick={() => {
+                console.log("clicked");
+              }}
+              disabled={
+                !(
+                  preference.valueSelected &&
+                  beanType.valueSelected &&
+                  quantity.valueSelected &&
+                  (preference.valueSelected === "Capsules"
+                    ? true
+                    : grindOption.valueSelected) &&
+                  deliveries.valueSelected
+                )
+              }
+            >
+              Create my plan!
+            </PrimaryButton>
           </div>
         </div>
       </div>

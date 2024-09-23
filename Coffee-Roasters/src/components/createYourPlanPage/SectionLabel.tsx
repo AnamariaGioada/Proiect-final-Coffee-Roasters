@@ -4,6 +4,7 @@ interface SectionLabelProps {
   name: string;
   selected?: boolean;
   disabled?: boolean;
+  onClick: () => void;
 }
 
 function SectionLabel({
@@ -11,9 +12,13 @@ function SectionLabel({
   name,
   selected,
   disabled,
+  onClick,
 }: React.PropsWithChildren<SectionLabelProps>) {
   return (
     <div
+      onClick={() => {
+        !disabled && onClick();
+      }}
       className={`section-label ${selected ? "selected" : ""} ${
         disabled ? "disabled" : ""
       }`}
