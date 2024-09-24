@@ -6,15 +6,11 @@ import Section from "./Section";
 import Card from "./Card";
 import { useState } from "react";
 import PrimaryButton from "../commonComponents/PrimaryButton";
-
-type SectionKey =
-  | "preference"
-  | "beanType"
-  | "quantity"
-  | "grindOption"
-  | "deliveries";
+import OrderPopup from "../commonComponents/OrderSummaryPopup";
 
 function CreateYourPlan() {
+  const [showPopUp, setShowPopUp] = useState(false);
+
   const [currentSection, setCurrentSection] = useState("preference");
 
   const [preference, setPreference] = useState<{
@@ -75,6 +71,7 @@ function CreateYourPlan() {
           </div>
         </div>
       </div>
+
       <div className="dark stepsContainer">
         <Steps />
       </div>
@@ -395,10 +392,11 @@ function CreateYourPlan() {
               deliveries={deliveries.valueSelected}
             />
           </div>
+
           <div className="primary-anchor">
             <PrimaryButton
               onClick={() => {
-                console.log("clicked");
+                setShowPopUp(true);
               }}
               disabled={
                 !(
@@ -417,6 +415,15 @@ function CreateYourPlan() {
           </div>
         </div>
       </div>
+      {showPopUp ? (
+        <OrderPopup
+          preference={preference.valueSelected}
+          beanType={beanType.valueSelected}
+          quantity={quantity.valueSelected}
+          grindOption={grindOption.valueSelected}
+          deliveries={deliveries.valueSelected}
+        />
+      ) : null}
     </>
   );
 }

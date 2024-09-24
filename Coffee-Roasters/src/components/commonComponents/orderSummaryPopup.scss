@@ -3,10 +3,34 @@
 @import "../../styles/common";
 
 #order-summary-container {
-  height: auto;
+  height: 597px;
   width: 540px;
-  .title {
+  background-color: $white;
+  border-radius: $borderRadius;
+
+  .content {
+    padding: 56px;
+
+    .paragraph-container h4 {
+      color: $grey;
+
+      .keyword {
+        color: $darkCyan;
+      }
+    }
+  }
+
+  .bottomContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  .title h2 {
     background-color: $darkGreyBlue;
     color: $white;
+    margin: 0;
+    padding: 40px;
+    border-top-left-radius: $borderRadius;
+    border-top-right-radius: $borderRadius;
   }
 }
