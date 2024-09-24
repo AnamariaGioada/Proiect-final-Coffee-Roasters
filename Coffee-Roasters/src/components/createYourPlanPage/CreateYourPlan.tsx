@@ -7,12 +7,12 @@ import Card from "./Card";
 import { useState } from "react";
 import PrimaryButton from "../commonComponents/PrimaryButton";
 import OrderPopup from "../commonComponents/OrderSummaryPopup";
+import { createPortal } from "react-dom";
 
 function CreateYourPlan() {
   const [showPopUp, setShowPopUp] = useState(false);
 
   const [currentSection, setCurrentSection] = useState("preference");
-
   const [preference, setPreference] = useState<{
     isOpen: boolean;
     valueSelected: string | null;
@@ -397,6 +397,16 @@ function CreateYourPlan() {
             <PrimaryButton
               onClick={() => {
                 setShowPopUp(true);
+                localStorage.setItem(
+                  "plan",
+                  JSON.stringify({
+                    preference: preference.valueSelected,
+                    beanType: beanType.valueSelected,
+                    quantity: quantity.valueSelected,
+                    grindOption: grindOption.valueSelected,
+                    deliveries: deliveries.valueSelected,
+                  })
+                );
               }}
               disabled={
                 !(
@@ -415,15 +425,18 @@ function CreateYourPlan() {
           </div>
         </div>
       </div>
-      {showPopUp ? (
-        <OrderPopup
-          preference={preference.valueSelected}
-          beanType={beanType.valueSelected}
-          quantity={quantity.valueSelected}
-          grindOption={grindOption.valueSelected}
-          deliveries={deliveries.valueSelected}
-        />
-      ) : null}
+      {showPopUp
+        ? createPortal(
+            <OrderPopup
+              preference={preference.valueSelected}
+              beanType={beanType.valueSelected}
+              quantity={quantity.valueSelected}
+              grindOption={grindOption.valueSelected}
+              deliveries={deliveries.valueSelected}
+            />,
+            document.body
+          )
+        : null}
     </>
   );
 }

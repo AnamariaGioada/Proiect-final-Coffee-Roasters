@@ -3,10 +3,13 @@ body {
   line-height: 26px;
   font-size: 16px;
   background-color: $white;
+  margin: 0;
+  padding: 0;
 }
 #PageContainer {
   margin: 0 auto;
   width: 1200px;
+  position: relative;
 }
 
 a {

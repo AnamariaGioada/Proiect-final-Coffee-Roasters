@@ -17,6 +17,7 @@ function App() {
           <Route path="about-us" Component={AboutUs} />
           <Route path="create-your-plan" Component={CreateYourPlan} />
           <Route path="test" Component={Test} />
+          <Route path="checkout" Component={() => null} />
           <Route Component={NotFound} />
         </Routes>
         <Footer />
