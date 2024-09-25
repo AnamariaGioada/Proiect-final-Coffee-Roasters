@@ -6,6 +6,7 @@ import NavBar from "./components/commonComponents/NavBar";
 import Footer from "./components/commonComponents/Footer";
 import Test from "./components/commonComponents/Test";
 import NotFound from "./components/commonComponents/NotFound";
+import Checkout from "./components/checkout/Checkout";
 
 function App() {
   return (
@@ -17,8 +18,9 @@ function App() {
           <Route path="about-us" Component={AboutUs} />
           <Route path="create-your-plan" Component={CreateYourPlan} />
           <Route path="test" Component={Test} />
-          <Route path="checkout" Component={() => null} />
-          <Route Component={NotFound} />
+          <Route path="checkout" Component={Checkout} />
+
+          <Route path="*" Component={NotFound} />
         </Routes>
         <Footer />
       </BrowserRouter>

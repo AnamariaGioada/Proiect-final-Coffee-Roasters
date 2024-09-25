@@ -142,6 +142,7 @@ function CreateYourPlan() {
               <Card
                 onClick={() => {
                   setPreference({ ...preference, valueSelected: "Capsules" });
+                  setGrindOption({ isOpen: false, valueSelected: null });
                   setBeanType({ ...beanType, isOpen: true });
                   setCurrentSection("beanType");
                 }}
@@ -433,6 +434,9 @@ function CreateYourPlan() {
               quantity={quantity.valueSelected}
               grindOption={grindOption.valueSelected}
               deliveries={deliveries.valueSelected}
+              closePopup={() => {
+                setShowPopUp(false);
+              }}
             />,
             document.body
           )

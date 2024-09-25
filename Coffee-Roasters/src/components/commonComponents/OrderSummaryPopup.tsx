@@ -1,13 +1,15 @@
 import SummaryParagraph from "../createYourPlanPage/SummaryParagraph";
 import "./orderSummaryPopup.scss";
-import PrimaryButton from "./PrimaryButton";
+import PrimaryAnchor from "./PrimaryAnchor";
+import calculatePrice from "../../utils/calculatePrice";
 
 interface OrderPopupProps {
-  preference: string | null;
-  beanType: string | null;
-  quantity: string | null;
+  preference: string;
+  beanType: string;
+  quantity: string;
   grindOption: string | null;
-  deliveries: string | null;
+  deliveries: string;
+  closePopup: () => void;
 }
 function OrderPopup({
   preference,
@@ -15,7 +17,16 @@ function OrderPopup({
   quantity,
   grindOption,
   deliveries,
+  closePopup,
 }: React.PropsWithChildren<OrderPopupProps>) {
+  const { total } = calculatePrice({
+    preferenceValue: preference,
+    beanTypeValue: beanType,
+    grindOptionValue: grindOption,
+    quantityValue: quantity,
+    frequencyValue: deliveries,
+  });
+
   return (
     <div id="order-summary-container">
       <div className="popup-content">
@@ -38,16 +49,15 @@ function OrderPopup({
             be redeemed at the checkout.
           </p>
           <div className="bottomContent">
-            <h3 className="price">$14.00/mo</h3>
-            {/* aici ar trebui sa am o metoda de calcul sau sa pun pretul de acolo..hmmm */}
+            <h3 className="total-price">${total}/mo</h3>
 
             <div className="button">
-              <PrimaryButton>Checkout</PrimaryButton>
+              <PrimaryAnchor to="/checkout">Checkout</PrimaryAnchor>
             </div>
           </div>
         </div>
       </div>
-      <div className="overlay"></div>
+      <div className="overlay" onClick={closePopup}></div>
     </div>
   );
 }
