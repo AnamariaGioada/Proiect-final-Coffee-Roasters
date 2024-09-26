@@ -27,7 +27,6 @@ function Section({
           <Arrow />
         </span>
       </div>
-      {/* {isOpen ? <div className="cards">{children}</div> : null} */}
     </div>
   );
 }
