@@ -7,6 +7,7 @@ import Footer from "./components/commonComponents/Footer";
 import Test from "./components/commonComponents/Test";
 import NotFound from "./components/commonComponents/NotFound";
 import Checkout from "./components/checkout/Checkout";
+import SubscriptionConfirmation from "./components/subscriptionConfirmation/SubscriptionConfirmation";
 
 function App() {
   return (
@@ -19,6 +20,10 @@ function App() {
           <Route path="create-your-plan" Component={CreateYourPlan} />
           <Route path="test" Component={Test} />
           <Route path="checkout" Component={Checkout} />
+          <Route
+            path="subscription-confirmation"
+            Component={SubscriptionConfirmation}
+          />
 
           <Route path="*" Component={NotFound} />
         </Routes>

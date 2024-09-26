@@ -429,11 +429,11 @@ function CreateYourPlan() {
       {showPopUp
         ? createPortal(
             <OrderPopup
-              preference={preference.valueSelected}
-              beanType={beanType.valueSelected}
-              quantity={quantity.valueSelected}
+              preference={preference.valueSelected as string}
+              beanType={beanType.valueSelected as string}
+              quantity={quantity.valueSelected as string}
               grindOption={grindOption.valueSelected}
-              deliveries={deliveries.valueSelected}
+              deliveries={deliveries.valueSelected as string}
               closePopup={() => {
                 setShowPopUp(false);
               }}

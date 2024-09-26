@@ -164,6 +164,9 @@ function Checkout() {
     event.preventDefault();
 
     const isValid = validateValues();
+    if (isValid) {
+      navigate("/subscription-confirmation");
+    }
   };
 
   return (
@@ -349,6 +352,9 @@ function Checkout() {
 
           <div className="primary-anchor">
             <PrimaryButton
+              onClick={() => {
+                localStorage.removeItem("plan");
+              }}
               disabled={
                 formData.firstName.length == 0 ||
                 formData.lastName.length == 0 ||
