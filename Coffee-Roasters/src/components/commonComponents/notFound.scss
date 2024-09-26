@@ -1,0 +1,26 @@
+@import "../../styles/fonts";
+@import "../../styles/colors";
+@import "../../styles/common";
+
+.message {
+  .cup-image {
+    background-size: cover;
+    width: 700px;
+    height: 700px;
+    margin: 0 150px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+  }
+  p {
+    position: relative;
+    width: 200px;
+    font-size: 24px;
+    font-weight: bold;
+    color: $panelBackground;
+    text-align: center;
+    margin-bottom: 50px;
+    margin-left: -325px;
+    z-index: 1;
+  }
+}

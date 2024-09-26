@@ -1,0 +1,130 @@
+body {
+  @extend .barlow-regular;
+  line-height: 26px;
+  font-size: 16px;
+  background-color: $white;
+  margin: 0;
+  padding: 0;
+}
+#PageContainer {
+  margin: 0 auto;
+  width: 1200px;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+  color: #83888f;
+}
+
+$borderRadius: 10px;
+
+h1 {
+  @extend .fraunces_9pt-black;
+  line-height: 72px;
+  font-size: 72px;
+}
+
+h2 {
+  @extend .fraunces_9pt-black;
+  font-size: 40px;
+  line-height: 48px;
+}
+
+h3 {
+  @extend .fraunces_9pt-black;
+  font-size: 32px;
+  line-height: 36px;
+}
+
+h4 {
+  @extend .fraunces_9pt-black;
+  font-size: 24px;
+  line-height: 32px;
+  color: $darkGreyBlue;
+}
+
+ul {
+  list-style: none;
+}
+// Hero Content style
+#heroContent {
+  width: 632px;
+  padding: 0 86px;
+  box-sizing: border-box;
+  color: $lightCream;
+
+  h1 {
+    margin-top: 0;
+  }
+  .presentationParagraph {
+    color: $lightCream;
+  }
+}
+
+// Primary Button
+.primaryButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 217px;
+  height: 56px;
+  background-color: $darkCyan;
+  border-radius: 6px;
+  border: none;
+  @extend .fraunces_9pt-black;
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: 700;
+  color: $lightCream;
+
+  &:hover {
+    background-color: $hoverButton;
+    cursor: pointer;
+  }
+
+  &:disabled {
+    background-color: $disabledButton;
+    cursor: unset;
+  }
+}
+
+// How it works
+.stepsContainer {
+  margin-bottom: 88px;
+
+  .stepsTitle {
+    color: $grey;
+    margin-left: 40px;
+  }
+
+  #steps {
+    display: flex;
+    color: $darkGreyBlue;
+
+    li {
+      margin-top: 80px;
+      border-top: 1px solid $paleOrange;
+      padding-right: 96px;
+
+      &.thirdStep {
+        border-top: 0;
+      }
+    }
+
+    h1 {
+      color: $paleOrange;
+      padding: 40px 0;
+    }
+
+    .circle {
+      width: 30px;
+      height: 30px;
+      border: solid $darkCyan;
+      border-radius: 50%;
+      background-color: $lightCream;
+      position: absolute;
+      margin-top: -18px;
+    }
+  }
+}

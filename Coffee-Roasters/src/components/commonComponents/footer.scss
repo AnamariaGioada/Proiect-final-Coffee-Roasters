@@ -1,0 +1,60 @@
+@import "../../styles/fonts";
+@import "../../styles/colors";
+@import "../../styles/common";
+
+footer {
+  background-color: $panelBackground;
+  height: 120px;
+  display: flex;
+  padding: 0 88px;
+  align-items: center;
+  justify-content: space-between;
+  color: $lightCream;
+
+  .footerLeft {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+
+    #menuList {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    li {
+      margin-right: 30px;
+
+      &.createYourPlan {
+        margin-right: 0;
+      }
+
+      a {
+        color: $grey;
+      }
+
+      a:hover {
+        color: $lightCream;
+      }
+    }
+  }
+
+  #socialMedia ul {
+    display: flex;
+    flex-direction: row;
+
+    li {
+      margin-right: 24px;
+
+      &.instagram {
+        margin-right: 0;
+      }
+
+      a:hover {
+        path {
+          fill: $paleOrange;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+@import "../../styles/fonts";
+@import "../../styles/colors";
+@import "../../styles/common";
+
+.summary-container {
+  background-color: $darkGreyBlue;
+  border-radius: $borderRadius;
+  padding: 47px 64px;
+  p {
+    color: $grey;
+  }
+  h4 {
+    color: $white;
+  }
+  .keyword {
+    color: $darkCyan;
+  }
+}
