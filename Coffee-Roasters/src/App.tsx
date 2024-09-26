@@ -8,11 +8,13 @@ import Test from "./components/commonComponents/Test";
 import NotFound from "./components/commonComponents/NotFound";
 import Checkout from "./components/checkout/Checkout";
 import SubscriptionConfirmation from "./components/subscriptionConfirmation/SubscriptionConfirmation";
+import ScrollToTop from "./components/commonComponents/ScrollToTop";
 
 function App() {
   return (
     <div id="PageContainer">
       <BrowserRouter>
+        <ScrollToTop />
         <NavBar />
         <Routes>
           <Route path="/" Component={Home} />
