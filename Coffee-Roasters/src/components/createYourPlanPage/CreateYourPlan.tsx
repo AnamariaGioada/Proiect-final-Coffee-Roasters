@@ -4,7 +4,7 @@ import SectionLabel from "./SectionLabel";
 import SummaryParagraph from "./SummaryParagraph";
 import Section from "./Section";
 import Card from "./Card";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import PrimaryButton from "../commonComponents/PrimaryButton";
 import OrderPopup from "../commonComponents/OrderSummaryPopup";
 import { createPortal } from "react-dom";
@@ -53,9 +53,46 @@ function CreateYourPlan() {
     valueSelected: null,
   });
 
+  const preferenceRef = useRef<HTMLDivElement>(null);
+  const beanTypeRef = useRef<HTMLDivElement>(null);
+  const quantityRef = useRef<HTMLDivElement>(null);
+  const grindOptionRef = useRef<HTMLDivElement>(null);
+  const deliveriesRef = useRef<HTMLDivElement>(null);
+
   function isGrindOptionDisabled() {
     return preference.valueSelected === "Capsules";
   }
+
+  function goToPreference() {
+    setPreference({ ...preference, isOpen: true });
+    setCurrentSection("preference");
+    preferenceRef.current?.scrollIntoView({ behavior: "smooth" });
+  }
+
+  function goToBeanType() {
+    setBeanType({ ...beanType, isOpen: true });
+    setCurrentSection("beanType");
+    beanTypeRef.current?.scrollIntoView({ behavior: "smooth" });
+  }
+
+  function goToQuantity() {
+    setQuantity({ ...quantity, isOpen: true });
+    setCurrentSection("quantity");
+    quantityRef.current?.scrollIntoView({ behavior: "smooth" });
+  }
+
+  function goToGrindOption() {
+    setGrindOption({ ...grindOption, isOpen: true });
+    setCurrentSection("grindOption");
+    grindOptionRef.current?.scrollIntoView({ behavior: "smooth" });
+  }
+
+  function goToDeliveries() {
+    setDeliveries({ ...deliveries, isOpen: true });
+    setCurrentSection("deliveries");
+    deliveriesRef.current?.scrollIntoView({ behavior: "smooth" });
+  }
+
   return (
     <>
       {/* Create plan hero */}
@@ -84,47 +121,32 @@ function CreateYourPlan() {
               orderNumber="01"
               name="Preferences"
               selected={currentSection === "preference"}
-              onClick={() => {
-                setPreference({ ...preference, isOpen: true });
-                setCurrentSection("preference");
-              }}
+              onClick={goToPreference}
             />
             <SectionLabel
               orderNumber="02"
               name="Bean Type"
               selected={currentSection === "beanType"}
-              onClick={() => {
-                setBeanType({ ...beanType, isOpen: true });
-                setCurrentSection("beanType");
-              }}
+              onClick={goToBeanType}
             />
             <SectionLabel
               orderNumber="03"
               name="Quantity"
               selected={currentSection === "quantity"}
-              onClick={() => {
-                setQuantity({ ...quantity, isOpen: true });
-                setCurrentSection("quantity");
-              }}
+              onClick={goToQuantity}
             />
             <SectionLabel
               orderNumber="04"
               name="Grind Option"
               selected={currentSection === "grindOption"}
               disabled={isGrindOptionDisabled()}
-              onClick={() => {
-                setGrindOption({ ...grindOption, isOpen: true });
-                setCurrentSection("grindOption");
-              }}
+              onClick={goToGrindOption}
             />
             <SectionLabel
               orderNumber="05"
               name="Deliveries"
               selected={currentSection === "deliveries"}
-              onClick={() => {
-                setDeliveries({ ...deliveries, isOpen: true });
-                setCurrentSection("deliveries");
-              }}
+              onClick={goToDeliveries}
             />
           </div>
         </div>
@@ -136,6 +158,7 @@ function CreateYourPlan() {
             question="How do you drink your coffee?"
             isOpen={preference.isOpen}
             disabled={false}
+            ref={preferenceRef}
           />
           {preference.isOpen ? (
             <div className="cards">
@@ -143,8 +166,7 @@ function CreateYourPlan() {
                 onClick={() => {
                   setPreference({ ...preference, valueSelected: "Capsules" });
                   setGrindOption({ isOpen: false, valueSelected: null });
-                  setBeanType({ ...beanType, isOpen: true });
-                  setCurrentSection("beanType");
+                  goToBeanType();
                 }}
                 title="Capsules"
                 text="Compatible with Nespresso systems and similar brewers"
@@ -153,8 +175,7 @@ function CreateYourPlan() {
               <Card
                 onClick={() => {
                   setPreference({ ...preference, valueSelected: "Filter" });
-                  setBeanType({ ...beanType, isOpen: true });
-                  setCurrentSection("beanType");
+                  goToBeanType();
                 }}
                 title="Filter"
                 text="For pour over or drip methods like Aeropress, Chemex, and V60"
@@ -164,8 +185,7 @@ function CreateYourPlan() {
               <Card
                 onClick={() => {
                   setPreference({ ...preference, valueSelected: "Espresso" });
-                  setBeanType({ ...beanType, isOpen: true });
-                  setCurrentSection("beanType");
+                  goToBeanType();
                 }}
                 title="Espresso"
                 text="Dense and finely ground beans for an intense, flavorful experience"
@@ -181,14 +201,14 @@ function CreateYourPlan() {
             isOpen={beanType.isOpen}
             question="What type of coffee?"
             disabled={false}
+            ref={beanTypeRef}
           />
           {beanType.isOpen ? (
             <div className="cards">
               <Card
                 onClick={() => {
                   setBeanType({ ...beanType, valueSelected: "Single Origin" });
-                  setQuantity({ ...quantity, isOpen: true });
-                  setCurrentSection("quantity");
+                  goToQuantity();
                 }}
                 title="Single Origin"
                 text="Distinct, high quality coffee from a specific family-owned farm"
@@ -197,8 +217,7 @@ function CreateYourPlan() {
               <Card
                 onClick={() => {
                   setBeanType({ ...beanType, valueSelected: "Decaf" });
-                  setQuantity({ ...quantity, isOpen: true });
-                  setCurrentSection("quantity");
+                  goToQuantity();
                 }}
                 title="Decaf"
                 text="Just like regular coffee, except the caffeine has been removed"
@@ -207,8 +226,7 @@ function CreateYourPlan() {
               <Card
                 onClick={() => {
                   setBeanType({ ...beanType, valueSelected: "Blended" });
-                  setQuantity({ ...quantity, isOpen: true });
-                  setCurrentSection("quantity");
+                  goToQuantity();
                 }}
                 title="Blended"
                 text="Combination of two or three dark roasted beans of organic coffees"
@@ -224,6 +242,7 @@ function CreateYourPlan() {
             question="How much would you like?"
             isOpen={quantity.isOpen}
             disabled={false}
+            ref={quantityRef}
           />
           {quantity.isOpen ? (
             <div className="cards">
@@ -231,14 +250,9 @@ function CreateYourPlan() {
                 onClick={() => {
                   setQuantity({ ...quantity, valueSelected: "250 g" });
                   if (isGrindOptionDisabled()) {
-                    setDeliveries({ ...deliveries, isOpen: true });
-                    setCurrentSection("deliveries");
+                    goToDeliveries();
                   } else {
-                    setGrindOption({
-                      ...grindOption,
-                      isOpen: true,
-                    });
-                    setCurrentSection("grindOption");
+                    goToGrindOption();
                   }
                 }}
                 title="250 g"
@@ -249,14 +263,9 @@ function CreateYourPlan() {
                 onClick={() => {
                   setQuantity({ ...quantity, valueSelected: "500 g" });
                   if (isGrindOptionDisabled()) {
-                    setDeliveries({ ...deliveries, isOpen: true });
-                    setCurrentSection("deliveries");
+                    goToDeliveries();
                   } else {
-                    setGrindOption({
-                      ...grindOption,
-                      isOpen: true,
-                    });
-                    setCurrentSection("grindOption");
+                    goToGrindOption();
                   }
                 }}
                 title="500 g"
@@ -267,14 +276,9 @@ function CreateYourPlan() {
                 onClick={() => {
                   setQuantity({ ...quantity, valueSelected: "1000 g" });
                   if (isGrindOptionDisabled()) {
-                    setDeliveries({ ...deliveries, isOpen: true });
-                    setCurrentSection("deliveries");
+                    goToDeliveries();
                   } else {
-                    setGrindOption({
-                      ...grindOption,
-                      isOpen: true,
-                    });
-                    setCurrentSection("grindOption");
+                    goToGrindOption();
                   }
                 }}
                 title="1000 g"
@@ -291,6 +295,7 @@ function CreateYourPlan() {
             question="Want us to grind them?"
             isOpen={grindOption.isOpen}
             disabled={isGrindOptionDisabled()}
+            ref={grindOptionRef}
           />
           {grindOption.isOpen ? (
             <div className="cards">
@@ -300,8 +305,7 @@ function CreateYourPlan() {
                     ...grindOption,
                     valueSelected: "Wholebean",
                   });
-                  setDeliveries({ ...deliveries, isOpen: true });
-                  setCurrentSection("deliveries");
+                  goToDeliveries();
                 }}
                 title="Wholebean"
                 text="Best choice if you cherish the full sensory experience"
@@ -313,8 +317,7 @@ function CreateYourPlan() {
                     ...grindOption,
                     valueSelected: "Filter",
                   });
-                  setDeliveries({ ...deliveries, isOpen: true });
-                  setCurrentSection("deliveries");
+                  goToDeliveries();
                 }}
                 title="Filter"
                 text="For drip or pour-over coffee methods such as V60 or Aeropress"
@@ -326,8 +329,7 @@ function CreateYourPlan() {
                     ...grindOption,
                     valueSelected: "Cafetiére",
                   });
-                  setDeliveries({ ...deliveries, isOpen: true });
-                  setCurrentSection("deliveries");
+                  goToDeliveries();
                 }}
                 title="Cafetiére"
                 text="Course ground beans specially suited for french press coffee"
@@ -343,6 +345,7 @@ function CreateYourPlan() {
             question="How often should we deliver?"
             isOpen={deliveries.isOpen}
             disabled={false}
+            ref={deliveriesRef}
           />
           {deliveries.isOpen ? (
             <div className="cards">

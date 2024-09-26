@@ -1,5 +1,6 @@
 import "./section.scss";
 import Arrow from "../SVG/arrow.svg";
+import { forwardRef } from "react";
 
 interface SectionProps {
   question: string;
@@ -8,14 +9,21 @@ interface SectionProps {
   onClick: () => void;
 }
 
-function Section({
-  question,
-  isOpen,
-  disabled,
-  onClick,
-}: React.PropsWithChildren<SectionProps>) {
+const Section = forwardRef<
+  HTMLDivElement,
+  React.PropsWithChildren<SectionProps>
+>(function (
+  {
+    question,
+    isOpen,
+    disabled,
+
+    onClick,
+  },
+  ref
+) {
   return (
-    <div className={`section ${disabled ? "disabled" : ""}`}>
+    <div ref={ref} className={`section ${disabled ? "disabled" : ""}`}>
       <div
         onClick={() => {
           !disabled && onClick();
@@ -30,5 +38,5 @@ function Section({
       {/* {isOpen ? <div className="cards">{children}</div> : null} */}
     </div>
   );
-}
+});
 export default Section;
