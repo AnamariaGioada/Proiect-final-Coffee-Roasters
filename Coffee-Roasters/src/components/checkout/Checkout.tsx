@@ -305,8 +305,9 @@ function Checkout() {
                 name="city"
                 id="city"
                 onChange={onChange}
-                value={formData.country}
+                value={formData.city}
               >
+                <option value="">Please select a city</option>
                 {countries[formData.country]?.map((city, index) => (
                   <option key={city + index} value={city}>
                     {city}
