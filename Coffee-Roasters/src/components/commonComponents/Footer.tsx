@@ -10,7 +10,9 @@ function Footer() {
     <footer>
       <div className="footerLeft">
         <div className="logo">
-          <LogoOnCream />
+          <Link to="/">
+            <LogoOnCream />
+          </Link>
         </div>
         <div className="menu">
           <ul id="menuList">

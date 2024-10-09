@@ -6,7 +6,9 @@ function NavBar() {
   return (
     <nav id="navigationBar">
       <div className="logo">
-        <Logo />
+        <Link to="/">
+          <Logo />
+        </Link>
       </div>
       <div className="menu">
         <ul id="menuList">
